@@ -1,0 +1,83 @@
+{
+  "store": {
+    "name": "PowerHouse Nutrition",
+    "location_short": "गारगोटी (कोल्हापूर)",
+    "address": "हिंद तारा कॉम्प्लेक्स, साई मंदिराजवळ, गारगोटी, ता. भुदरगड, जि. कोल्हापूर - ४१६२०९",
+    "timings": "सकाळी ९:०० ते रात्री ९:०० (दररोज चालू)",
+    "whatsapp_number": "919876543210",
+    "phone": "+91 9876543210"
+  },
+  "announcement": {
+    "enabled": true,
+    "text": "🚩 कोल्हापूर व गारगोटी परिसरातील पैलवान आणि खेळाडूंसाठी खास सवलत! ऑनलाईनपेक्षा स्वस्त आणि १००% अस्सल माल!"
+  },
+  "hero_offer_tag": "BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!",
+  "pailwan_stack": {
+    "title": "Pailwan Strength Stack",
+    "tagline": "लाल मातीतून तयार झालेली मर्दानी ताकद!",
+    "english_sub": "(Mardaani strength born of the red soil!)",
+    "price": "₹३,४९९",
+    "mrp": "₹४,५९९",
+    "saving": "बचत ₹१,१००",
+    "image": "./assets/product-stack.jpg",
+    "in_stock": true,
+    "benefits": [
+      "व्हे प्रोटीन + मायक्रोनाईज्ड क्रिएटिन + अश्वगंधा बूस्टर",
+      "लाल मातीतील कुस्तीसाठी स्फोटक ताकद आणि सहनशक्ती",
+      "कॉम्बोवर मिळवा थेट ₹१,१०० रुपयांची थेट सूट!"
+    ]
+  },
+  "products": [
+    {
+      "id": "whey-isolate",
+      "title": "PowerHouse 100% Whey Isolate",
+      "marathi_desc": "२५g प्रोटीन • ५.५g BCAAs • झिरो शुगर",
+      "price": "₹२,४९९",
+      "mrp": "₹३,२९९",
+      "saving": "बचत ₹८००",
+      "tag": "#1 Bestseller",
+      "tag_color": "amberGold",
+      "in_stock": true,
+      "image": "./assets/wrestler-tub.jpg",
+      "benefits": [
+        "जलद मसल रिकव्हरी व स्नायूंची ताकद",
+        "DigeZyme® एन्झाईम्स (पचनास अत्यंत हलके)",
+        "स्वादिष्ट रिच चॉकलेट व व्हॅनिला फ्लेवर"
+      ]
+    },
+    {
+      "id": "pailwan-stack",
+      "title": "Pailwan Akhada Strength Stack",
+      "marathi_desc": "व्हे प्रोटीन + क्रिएटिन + अश्वगंधा बूस्टर",
+      "price": "₹३,४९९",
+      "mrp": "₹४,५९९",
+      "saving": "बचत ₹१,१००",
+      "tag": "Most Recommended",
+      "tag_color": "saffron",
+      "in_stock": true,
+      "image": "./assets/product-stack.jpg",
+      "benefits": [
+        "लाल मातीतील तालमीसाठी स्फोटक ताकद",
+        "स्टॅमिना आणि स्नायूंची झटपट वाढ",
+        "सोबत १ फ्री शेकर कप मोफत!"
+      ]
+    },
+    {
+      "id": "pure-creatine",
+      "title": "Micronized Pure Creatine",
+      "marathi_desc": "१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g)",
+      "price": "₹७९९",
+      "mrp": "₹१,१९९",
+      "saving": "बचत ₹४००",
+      "tag": "Power Booster",
+      "tag_color": "amberGold",
+      "in_stock": true,
+      "image": "./assets/wrestler-tub.jpg",
+      "benefits": [
+        "हेवी लिफ्टिंग व कुस्तीसाठी प्रचंड ऊर्जा",
+        "मसल व्हॉल्यूम व ताकद वाढवते",
+        "पाण्यात पूर्णपणे विरघळते (No Grit)"
+      ]
+    }
+  ]
+}

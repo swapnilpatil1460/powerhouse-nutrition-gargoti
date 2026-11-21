@@ -208,7 +208,7 @@
   <!-- ================= TOP NOTICE BAR ================= -->
   <div class="relative z-50 bg-gradient-to-r from-akhadaRed via-saffron to-amberGold text-black text-xs font-black py-1.5 px-4 text-center tracking-wide flex items-center justify-center gap-2">
     <span class="w-2 h-2 rounded-full bg-black animate-ping"></span>
-    <span class="font-marathi">🚩 कोल्हापूर व गारगोटी परिसरातील पैलवान आणि खेळाडूंसाठी खास सवलत! ऑनलाईनपेक्षा स्वस्त आणि १००% अस्सल माल!</span>
+    <span id="topNoticeText" class="font-marathi">🚩 कोल्हापूर व गारगोटी परिसरातील पैलवान आणि खेळाडूंसाठी खास सवलत! ऑनलाईनपेक्षा स्वस्त आणि १००% अस्सल माल!</span>
   </div>
 
   <!-- ================= 1. NAVIGATION HEADER ================= -->
@@ -271,16 +271,16 @@
   </header>
 
   <!-- ================= 2. MAIN HERO SECTION ================= -->
-  <section id="home" class="relative bg-akhada-depth pt-8 pb-16 lg:py-20 overflow-hidden perspective-1000">
+  <section id="home" class="relative bg-akhada-depth pt-8 pb-16 lg:py-16 overflow-hidden perspective-1000">
     
     <!-- Multi-Layered 3D Parallax Red Mud & Fiery Sparks Canvas -->
     <canvas id="heroParticlesCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-85"></canvas>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
         
-        <!-- Left Column (High-Energy Copy) (7 cols) -->
+        <!-- Left Column (High-Energy Copy & Pailwan Stack Showcase) (7 cols) -->
         <div class="lg:col-span-7 space-y-6 text-left">
           
           <!-- Traditional Saffron Divider Borders Pre-title -->
@@ -311,12 +311,11 @@
           <!-- 🎯 Highlight Tag (Saffron-and-Yellow Highlighted 3D Badge) -->
           <div class="inline-flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-gradient-to-r from-saffron/20 via-amberGold/15 to-transparent border-2 border-saffron/70 text-amberGold text-xs sm:text-sm font-black shadow-[0_0_25px_rgba(255,90,0,0.35)] transform hover:scale-[1.02] transition-transform">
             <span class="text-base">🏷️</span>
-            <span>BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!</span>
+            <span id="heroOfferTag">BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!</span>
           </div>
 
           <!-- Primary CTA Buttons (with 3D button-press effects) -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            
+          <div class="flex flex-wrap items-center gap-4 pt-1">
             <!-- Button 1: WhatsApp Inquire (Vibrant 3D Gradient WhatsApp Green) -->
             <a href="https://wa.me/919876543210?text=Namaskar%20PowerHouse%20Nutrition,%20mala%20Whey%20Protein%20ani%20offers%20baddal%20mahiti%20havi%20aahe." 
                target="_blank"
@@ -335,8 +334,7 @@
           </div>
 
           <!-- Guarantee Badges (Flip-Hover Effect & Maratha Icon) -->
-          <div class="grid grid-cols-2 gap-4 pt-3 max-w-md">
-            
+          <div class="grid grid-cols-2 gap-4 pt-1 max-w-md">
             <!-- Badge 1: 100% Original Guarantee -->
             <div class="p-3 rounded-2xl bg-surfaceCard/90 border border-amberGold/30 flex items-center gap-3 hover:border-amberGold transition-colors cursor-pointer group shadow-lg">
               <div class="w-10 h-10 rounded-xl bg-amberGold/20 flex items-center justify-center text-amberGold shrink-0 group-hover:scale-110 transition-transform">
@@ -358,22 +356,81 @@
                 <div class="text-[10px] text-saffron font-semibold">Gargoti's Trusted Store</div>
               </div>
             </div>
+          </div>
+
+          <!-- Pailwan Strength Stack Showcase (Left Column under Badges) -->
+          <div class="tilt-box rounded-3xl p-5 sm:p-6 bg-surfaceCard/90 border border-saffron/30 shadow-2xl relative preserve-3d overflow-hidden cursor-pointer"
+               data-tilt 
+               data-tilt-max="10" 
+               data-tilt-speed="400" 
+               data-tilt-perspective="1000"
+               data-tilt-glare
+               data-tilt-max-glare="0.2">
+            
+            <div class="shimmer-glint"></div>
+
+            <div class="space-y-3.5">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black tracking-widest text-saffron uppercase bg-saffron/10 px-3 py-1 rounded-full border border-saffron/30">
+                  🔥 PAILWAN COMBO STACK
+                </span>
+                <span id="stackStockBadge" class="text-xs font-bold text-waGreen flex items-center gap-1">
+                  ● In Stock (Gargoti)
+                </span>
+              </div>
+
+              <!-- Product Stack Image -->
+              <div class="w-full h-36 sm:h-40 rounded-2xl bg-black/60 border border-white/5 flex items-center justify-center p-2.5 overflow-hidden translate-z-20">
+                <img src="./assets/product-stack.jpg" alt="Pailwan Strength Stack: Whey, Creatine, Multivitamins" class="h-full object-contain transform hover:scale-105 transition-transform duration-500">
+              </div>
+
+              <div class="translate-z-30">
+                <h3 id="stackTitle" class="text-lg sm:text-xl font-black text-white font-display">Pailwan Strength Stack</h3>
+                <p id="stackTagline" class="font-marathi text-xs sm:text-sm text-amberGold font-extrabold mt-0.5">
+                  लाल मातीतून तयार झालेली मर्दानी ताकद!
+                </p>
+                <p class="text-[11px] text-zinc-400 mt-0.5">
+                  (Mardaani strength born of the red soil!)
+                </p>
+              </div>
+
+              <ul id="stackBenefitsList" class="text-xs text-zinc-300 space-y-1.5 pt-2 border-t border-white/10 font-marathi">
+                <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> व्हे प्रोटीन + मायक्रोनाईज्ड क्रिएटिन + अश्वगंधा बूस्टर</li>
+                <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> लाल मातीतील कुस्तीसाठी स्फोटक ताकद आणि सहनशक्ती</li>
+                <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> कॉम्बोवर मिळवा थेट ₹१,१०० रुपयांची थेट सूट!</li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-4 translate-z-20">
+              <div>
+                <div id="stackPriceDisplay" class="text-xl sm:text-2xl font-black text-white font-display">₹३,४९९</div>
+                <div id="stackMrpDisplay" class="text-xs text-zinc-500 line-through">₹४,५९९ (बचत ₹१,१००)</div>
+              </div>
+
+              <!-- Dropdown Simulation Pill -->
+              <a id="stackOrderBtn" 
+                 href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pailwan%20Strength%20Stack%20combo%20order%20karaycha%20aahe." 
+                 target="_blank"
+                 class="btn-3d-saffron px-4 py-2.5 rounded-xl text-black font-extrabold text-xs flex items-center gap-1.5">
+                <span>निवडा (Choose) ∨</span>
+              </a>
+            </div>
 
           </div>
 
         </div>
 
-        <!-- Right Column (3D Parallax & Tilt Focal Point: Pailwan + PowerHouse Whey Tub) (5 cols) -->
-        <div class="lg:col-span-5 relative flex flex-col items-center justify-center">
+        <!-- Right Column: Unified 3D Tilt Focal Card (Pailwan + Tub + Product Bar + Quick Inquiry) (5 cols) -->
+        <div class="lg:col-span-5 relative flex flex-col items-center justify-start w-full">
           
-          <!-- Tilt Container reacting heavily to 3D movement -->
-          <div class="tilt-box relative w-full max-w-[480px] rounded-3xl p-3 bg-surfaceCard/80 backdrop-blur-xl shadow-2xl cursor-pointer preserve-3d overflow-hidden" 
+          <!-- Unified Master Tilt Container (Exact Match to User Mockup Image 2!) -->
+          <div class="tilt-box relative w-full max-w-[480px] rounded-3xl p-3.5 bg-surfaceCard/95 border-2 border-saffron/70 backdrop-blur-xl shadow-[0_0_35px_rgba(255,90,0,0.35)] cursor-pointer preserve-3d overflow-hidden" 
                data-tilt 
-               data-tilt-max="14" 
+               data-tilt-max="10" 
                data-tilt-speed="400" 
                data-tilt-perspective="1000"
                data-tilt-glare 
-               data-tilt-max-glare="0.35">
+               data-tilt-max-glare="0.25">
             
             <!-- Diagonal Shimmer Glint Layer -->
             <div class="shimmer-glint"></div>
@@ -381,28 +438,90 @@
             <!-- Ambient Glow Halo behind wrestler -->
             <div class="absolute -inset-6 bg-gradient-to-tr from-saffron/30 via-akhadaRed/30 to-amberGold/20 rounded-full blur-3xl -z-10"></div>
 
-            <!-- Foreground Artwork: Wrestler with Gada and Tub -->
+            <!-- 1. Top Artwork: Wrestler with Gada and Tub -->
             <div class="relative rounded-2xl overflow-hidden preserve-3d">
               <img src="./assets/hero-stage.jpg" 
                    alt="PowerHouse Nutrition Maharashtrian Pailwan with Gada in Akhada alongside PowerHouse Whey Tub" 
                    class="w-full h-auto object-cover rounded-2xl transform transition-transform duration-500 translate-z-10">
               
               <!-- Floating 3D Badge: Pure Bioactive Isolate -->
-              <div class="absolute top-4 left-4 p-2.5 rounded-xl bg-black/80 backdrop-blur-md border border-saffron/40 shadow-2xl flex items-center gap-2 translate-z-30 animate-subtle-float">
+              <div class="absolute top-4 left-4 p-2.5 rounded-xl bg-black/85 backdrop-blur-md border border-saffron/40 shadow-2xl flex items-center gap-2 translate-z-30 animate-subtle-float">
                 <span class="w-2.5 h-2.5 rounded-full bg-waGreen animate-ping"></span>
                 <span class="text-[11px] font-black text-white uppercase tracking-wider">3D BIO-WHEY ISOLATE</span>
               </div>
+            </div>
 
-              <!-- Floating 3D Product Tag: २५g प्रोटीन · १००% ओरिजिनल -->
-              <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-black/85 backdrop-blur-xl border border-amberGold/50 shadow-2xl flex items-center justify-between translate-z-40">
-                <div>
-                  <div class="text-xs font-black text-amberGold tracking-wider uppercase font-display">POWERHOUSE WHEY</div>
-                  <div class="font-marathi text-[11px] text-zinc-200 font-bold mt-0.5">२५g प्रोटीन • १००% ओरिजिनल • ०% भेसळ</div>
-                </div>
-                <span class="px-2.5 py-1 bg-gradient-to-r from-saffron to-amberGold text-black text-[10px] font-black rounded-lg uppercase shadow-md">
-                  TOP SELLER
-                </span>
+            <!-- 2. Middle Product Bar (Exact visual match to user uploaded Image 2!) -->
+            <div class="mt-3 p-3.5 rounded-2xl bg-black/90 border border-amberGold/50 shadow-xl flex items-center justify-between translate-z-30">
+              <div>
+                <div class="text-xs sm:text-sm font-black text-amberGold tracking-wider uppercase font-display">POWERHOUSE WHEY</div>
+                <div class="font-marathi text-[11px] sm:text-xs text-zinc-200 font-bold mt-0.5">२५g प्रोटीन • १००% ओरिजिनल • ०% भेसळ</div>
               </div>
+              <span class="px-3 py-1.5 bg-gradient-to-r from-saffron to-amberGold text-black text-[10px] sm:text-xs font-black rounded-lg uppercase shadow-md tracking-wider">
+                TOP SELLER
+              </span>
+            </div>
+
+            <!-- 3. Integrated Quick Inquiry Form (Inside the card, directly below the bar!) -->
+            <div class="mt-3 p-4 sm:p-5 rounded-2xl bg-black/60 border border-white/10 translate-z-30 space-y-3.5">
+              
+              <div class="flex items-center justify-between pb-2.5 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-saffron animate-ping"></span>
+                  <h3 class="font-marathi text-sm sm:text-base font-black text-amberGold tracking-wide">
+                    चौकशी आणि ऑर्डर <span class="text-[10px] font-normal text-zinc-400 uppercase font-sans">(QUICK INQUIRY)</span>
+                  </h3>
+                </div>
+                <span class="text-[10px] font-mono text-zinc-400">२ मिनिटात रिप्लाय मिळेल</span>
+              </div>
+
+              <!-- Inquiry Form with 3D Inset Shadows on Focus -->
+              <form id="quickInquiryForm" class="space-y-3" onsubmit="handleInquirySubmit(event)">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <!-- Name Input -->
+                  <div>
+                    <label class="block text-[11px] font-bold text-zinc-300 font-marathi mb-1">
+                      नाव (Name) <span class="text-saffron">*</span>
+                    </label>
+                    <input type="text" id="custName" required placeholder="उदा. सागर पाटील" 
+                           class="input-3d w-full px-3 py-2.5 rounded-xl text-white placeholder-zinc-500 text-xs">
+                  </div>
+
+                  <!-- Phone Input -->
+                  <div>
+                    <label class="block text-[11px] font-bold text-zinc-300 font-marathi mb-1">
+                      फोन नंबर (WhatsApp) <span class="text-waGreen">*</span>
+                    </label>
+                    <input type="tel" id="custPhone" required placeholder="उदा. 9876543210" 
+                           class="input-3d w-full px-3 py-2.5 rounded-xl text-white placeholder-zinc-500 text-xs">
+                  </div>
+                </div>
+
+                <!-- Product Selection Dropdown -->
+                <div>
+                  <label class="block text-[11px] font-bold text-zinc-300 font-marathi mb-1">
+                    सप्लीमेंट निवडा (Select Product) <span class="text-saffron">*</span>
+                  </label>
+                  <select id="custProduct" 
+                          class="input-3d w-full px-3 py-2.5 rounded-xl text-white text-xs">
+                    <option value="PowerHouse 100% Whey Isolate (25g Protein)">PowerHouse 100% Whey Isolate (२५g प्रोटीन • ₹२,४९९)</option>
+                    <option value="Pailwan Strength Stack (Whey + Creatine + Ashwagandha Combo)">Pailwan Strength Stack (व्हे + क्रिएटिन + अश्वगंधा कॉम्बो • ₹३,४९९)</option>
+                    <option value="Micronized Pure Creatine Monohydrate (Strength Booster)">Micronized Pure Creatine Monohydrate (अल्ट्रा-प्युअर • ₹७९९)</option>
+                    <option value="Akhada High Calorie Mass Gainer (Weight & Muscle)">Akhada High Calorie Mass Gainer (वजन व ताकद वाढीसाठी • ₹१,८९९)</option>
+                    <option value="Free Diet & Supplement Consultation">फक्त मार्गदर्शन हवे आहे (Free Consultation)</option>
+                  </select>
+                </div>
+
+                <!-- Submit Button with 3D Compress Scale Effect -->
+                <button type="submit" 
+                        class="btn-3d-wa w-full py-3 px-4 rounded-xl text-black font-black text-xs sm:text-sm flex items-center justify-center gap-2 mt-1 shadow-xl">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+                  <span>व्हॉट्सॲपवर मेसेज पाठवा 💬 (SEND WHATSAPP INQUIRY)</span>
+                </button>
+
+              </form>
+
             </div>
 
           </div>
@@ -415,148 +534,6 @@
 
     <!-- Royal Saffron Divider Line -->
     <div class="maratha-border mt-14 w-full"></div>
-  </section>
-
-  <!-- ================= 3. BOTTOM SHOWCASE & QUICK INQUIRY GRID ================= -->
-  <section class="py-16 bg-[#0c0d0e] relative z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        
-        <!-- Left Column: Products Call-Out with 3D Depth (Pailwan Strength Stack) (5 cols) -->
-        <div class="lg:col-span-5 tilt-box rounded-3xl p-6 sm:p-7 bg-surfaceCard/90 backdrop-blur-xl shadow-2xl flex flex-col justify-between preserve-3d cursor-pointer"
-             data-tilt 
-             data-tilt-max="12" 
-             data-tilt-speed="400" 
-             data-tilt-perspective="1000"
-             data-tilt-glare
-             data-tilt-max-glare="0.25">
-          
-          <div class="shimmer-glint"></div>
-
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-black tracking-widest text-saffron uppercase bg-saffron/10 px-3 py-1 rounded-full border border-saffron/30">
-                🔥 PAILWAN COMBO STACK
-              </span>
-              <span class="text-xs font-bold text-waGreen flex items-center gap-1">
-                ● In Stock (Gargoti)
-              </span>
-            </div>
-
-            <!-- Product Stack Image -->
-            <div class="w-full h-44 rounded-2xl bg-black/60 border border-white/5 flex items-center justify-center p-3 overflow-hidden translate-z-20">
-              <img src="./assets/product-stack.jpg" alt="Pailwan Strength Stack: Whey, Creatine, Multivitamins" class="h-full object-contain transform hover:scale-105 transition-transform duration-500">
-            </div>
-
-            <div class="translate-z-30">
-              <h3 class="text-xl font-black text-white font-display">Pailwan Strength Stack</h3>
-              <p class="font-marathi text-sm sm:text-base text-amberGold font-extrabold mt-1">
-                लाल मातीतून तयार झालेली मर्दानी ताकद!
-              </p>
-              <p class="text-xs text-zinc-400 mt-0.5">
-                (Mardaani strength born of the red soil!)
-              </p>
-            </div>
-
-            <ul class="text-xs text-zinc-300 space-y-2 pt-2 border-t border-white/10 font-marathi">
-              <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> व्हे प्रोटीन + मायक्रोनाईज्ड क्रिएटिन + अश्वगंधा बूस्टर</li>
-              <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> लाल मातीतील कुस्तीसाठी स्फोटक ताकद आणि सहनशक्ती</li>
-              <li class="flex items-center gap-2"><span class="text-saffron font-bold">✓</span> कॉम्बोवर मिळवा थेट ₹१,१०० रुपयांची थेट सूट!</li>
-            </ul>
-          </div>
-
-          <div class="pt-6 border-t border-white/10 flex items-center justify-between gap-4 translate-z-20">
-            <div>
-              <div class="text-2xl font-black text-white font-display">₹३,४९९</div>
-              <div class="text-xs text-zinc-500 line-through">₹४,५९९ (बचत ₹१,१००)</div>
-            </div>
-
-            <!-- Dropdown Simulation Pill -->
-            <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pailwan%20Strength%20Stack%20combo%20order%20karaycha%20aahe." 
-               target="_blank"
-               class="btn-3d-saffron px-4 py-2.5 rounded-xl text-black font-extrabold text-xs flex items-center gap-1.5">
-              <span>निवडा (Choose) ∨</span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right Column: Interactive Quick Inquiry Card & Touch Form (7 cols) -->
-        <div class="lg:col-span-7 tilt-box rounded-3xl p-6 sm:p-8 bg-surfaceCard/95 backdrop-blur-xl shadow-2xl border-2 border-saffron/80 preserve-3d"
-             data-tilt 
-             data-tilt-max="10" 
-             data-tilt-speed="400" 
-             data-tilt-perspective="1000"
-             data-tilt-glare
-             data-tilt-max-glare="0.25">
-          
-          <div class="shimmer-glint"></div>
-
-          <!-- Header -->
-          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6 translate-z-20">
-            <div class="flex items-center gap-2.5">
-              <span class="w-3 h-3 rounded-full bg-saffron animate-ping"></span>
-              <h3 class="font-marathi text-lg sm:text-xl font-black text-amberGold tracking-wide">
-                चौकशी आणि ऑर्डर <span class="text-xs font-normal text-zinc-400 uppercase font-sans">(QUICK INQUIRY)</span>
-              </h3>
-            </div>
-            <span class="text-[11px] font-mono text-zinc-400">२ मिनिटात व्हॉट्सॲपवर रिप्लाय मिळेल</span>
-          </div>
-
-          <!-- Inquiry Form with 3D Inset Shadows on Focus -->
-          <form id="quickInquiryForm" class="space-y-4 translate-z-30" onsubmit="handleInquirySubmit(event)">
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <!-- Name Input -->
-              <div>
-                <label class="block text-xs font-bold text-zinc-300 font-marathi mb-1.5">
-                  नाव (Name) <span class="text-saffron">*</span>
-                </label>
-                <input type="text" id="custName" required placeholder="उदा. सागर पाटील" 
-                       class="input-3d w-full px-4 py-3 rounded-xl text-white placeholder-zinc-500 text-sm">
-              </div>
-
-              <!-- Phone Input -->
-              <div>
-                <label class="block text-xs font-bold text-zinc-300 font-marathi mb-1.5">
-                  फोन नंबर (WhatsApp) <span class="text-waGreen">*</span>
-                </label>
-                <input type="tel" id="custPhone" required placeholder="उदा. 9876543210" 
-                       class="input-3d w-full px-4 py-3 rounded-xl text-white placeholder-zinc-500 text-sm">
-              </div>
-            </div>
-
-            <!-- Product Selection Dropdown -->
-            <div>
-              <label class="block text-xs font-bold text-zinc-300 font-marathi mb-1.5">
-                सप्लीमेंट निवडा (Select Product) <span class="text-saffron">*</span>
-              </label>
-              <select id="custProduct" 
-                      class="input-3d w-full px-4 py-3 rounded-xl text-white text-sm">
-                <option value="PowerHouse 100% Whey Isolate (25g Protein)">PowerHouse 100% Whey Isolate (२५g प्रोटीन • ₹२,४९९)</option>
-                <option value="Pailwan Strength Stack (Whey + Creatine + Ashwagandha Combo)">Pailwan Strength Stack (व्हे + क्रिएटिन + अश्वगंधा कॉम्बो • ₹३,४९९)</option>
-                <option value="Micronized Pure Creatine Monohydrate (Strength Booster)">Micronized Pure Creatine Monohydrate (अल्ट्रा-प्युअर • ₹७९९)</option>
-                <option value="Akhada High Calorie Mass Gainer (Weight & Muscle)">Akhada High Calorie Mass Gainer (वजन व ताकद वाढीसाठी • ₹१,८९९)</option>
-                <option value="Plant Based Organic Vegan Protein (Digestive Safe)">Plant Based Organic Vegan Protein (पचनास हलके • ₹२,३९९)</option>
-                <option value="Free Diet & Supplement Consultation">फक्त मार्गदर्शन हवे आहे (Free Consultation)</option>
-              </select>
-            </div>
-
-            <!-- Submit Button with 3D Compress Scale Effect -->
-            <button type="submit" 
-                    class="btn-3d-wa w-full py-4 px-6 rounded-2xl text-black font-extrabold text-sm sm:text-base flex items-center justify-center gap-3 mt-2 shadow-2xl">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
-              <span>व्हॉट्सॲपवर मेसेज पाठवा 💬 (SEND WHATSAPP INQUIRY)</span>
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </div>
   </section>
 
   <!-- ================= 4. PRODUCTS & SUPPLEMENT STUDIO ================= -->
@@ -609,10 +586,10 @@
           <div class="pt-6">
             <div class="flex items-baseline justify-between mb-4">
               <div>
-                <span class="text-2xl font-black text-white font-display">₹२,४९९</span>
-                <span class="text-xs text-zinc-500 line-through ml-1.5">₹३,२९९</span>
+                <span id="prod-price-whey-isolate" class="text-2xl font-black text-white font-display">₹२,४९९</span>
+                <span id="prod-mrp-whey-isolate" class="text-xs text-zinc-500 line-through ml-1.5">₹३,२९९</span>
               </div>
-              <span class="text-xs font-bold text-amberGold">बचत ₹८००</span>
+              <span id="prod-saving-whey-isolate" class="text-xs font-bold text-amberGold">बचत ₹८००</span>
             </div>
             <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20PowerHouse%20100%25%20Whey%20Protein%20order%20karaycha%20aahe." 
                target="_blank" 
@@ -652,10 +629,10 @@
           <div class="pt-6">
             <div class="flex items-baseline justify-between mb-4">
               <div>
-                <span class="text-2xl font-black text-white font-display">₹३,४९९</span>
-                <span class="text-xs text-zinc-500 line-through ml-1.5">₹४,५९९</span>
+                <span id="prod-price-pailwan-stack" class="text-2xl font-black text-white font-display">₹३,४९९</span>
+                <span id="prod-mrp-pailwan-stack" class="text-xs text-zinc-500 line-through ml-1.5">₹४,५९९</span>
               </div>
-              <span class="text-xs font-bold text-saffron">बचत ₹१,१००</span>
+              <span id="prod-saving-pailwan-stack" class="text-xs font-bold text-saffron">बचत ₹१,१००</span>
             </div>
             <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pailwan%20Strength%20Stack%20combo%20order%20karaycha%20aahe." 
                target="_blank" 
@@ -698,10 +675,10 @@
           <div class="pt-6">
             <div class="flex items-baseline justify-between mb-4">
               <div>
-                <span class="text-2xl font-black text-white font-display">₹७९९</span>
-                <span class="text-xs text-zinc-500 line-through ml-1.5">₹१,१९९</span>
+                <span id="prod-price-pure-creatine" class="text-2xl font-black text-white font-display">₹७९९</span>
+                <span id="prod-mrp-pure-creatine" class="text-xs text-zinc-500 line-through ml-1.5">₹१,१९९</span>
               </div>
-              <span class="text-xs font-bold text-amberGold">बचत ₹४००</span>
+              <span id="prod-saving-pure-creatine" class="text-xs font-bold text-amberGold">बचत ₹४००</span>
             </div>
             <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pure%20Creatine%20Monohydrate%20order%20karaycha%20aahe." 
                target="_blank" 
@@ -830,6 +807,94 @@
 
   <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
+    // 0. Dynamic Client Data Binding from site_data.json
+    let currentSiteConfig = null;
+
+    async function loadSiteConfig() {
+      try {
+        const res = await fetch('./site_data.json?v=' + Date.now());
+        if (!res.ok) return;
+        currentSiteConfig = await res.json();
+        applySiteConfig(currentSiteConfig);
+      } catch (err) {
+        console.log("Using built-in data (offline/file mode):", err);
+      }
+    }
+
+    function applySiteConfig(cfg) {
+      if (!cfg) return;
+
+      // 1. Top Announcement
+      if (cfg.announcement && cfg.announcement.text) {
+        const topNotice = document.getElementById('topNoticeText');
+        if (topNotice) topNotice.textContent = cfg.announcement.text;
+      }
+
+      // 2. Hero Offer Tag
+      if (cfg.hero_offer_tag) {
+        const heroTag = document.getElementById('heroOfferTag');
+        if (heroTag) heroTag.textContent = cfg.hero_offer_tag;
+      }
+
+      // 3. Store WhatsApp Phone
+      if (cfg.store && cfg.store.whatsapp_number) {
+        window.STORE_WA_NUMBER = cfg.store.whatsapp_number;
+        document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
+          try {
+            const url = new URL(link.href);
+            const text = url.searchParams.get('text') || '';
+            link.href = `https://wa.me/${cfg.store.whatsapp_number}?text=${encodeURIComponent(text)}`;
+          } catch(e) {}
+        });
+      }
+
+      // 4. Pailwan Stack updates
+      if (cfg.pailwan_stack) {
+        const ps = cfg.pailwan_stack;
+        const pPrice = document.getElementById('stackPriceDisplay');
+        if (pPrice && ps.price) pPrice.textContent = ps.price;
+        const pMrp = document.getElementById('stackMrpDisplay');
+        if (pMrp && ps.mrp && ps.saving) pMrp.textContent = `${ps.mrp} (${ps.saving})`;
+        const pTitle = document.getElementById('stackTitle');
+        if (pTitle && ps.title) pTitle.textContent = ps.title;
+        const pTag = document.getElementById('stackTagline');
+        if (pTag && ps.tagline) pTag.textContent = ps.tagline;
+        const pStock = document.getElementById('stackStockBadge');
+        if (pStock && typeof ps.in_stock === 'boolean') {
+          pStock.innerHTML = ps.in_stock ? '● In Stock (Gargoti)' : '<span class="text-rose-500">✕ Out of Stock</span>';
+          pStock.className = `text-xs font-bold flex items-center gap-1 ${ps.in_stock ? 'text-waGreen' : 'text-rose-500'}`;
+        }
+      }
+
+      // 5. Products Section Updates
+      if (cfg.products && Array.isArray(cfg.products)) {
+        cfg.products.forEach(p => {
+          const priceEl = document.getElementById(`prod-price-${p.id}`);
+          if (priceEl && p.price) priceEl.textContent = p.price;
+          const mrpEl = document.getElementById(`prod-mrp-${p.id}`);
+          if (mrpEl && p.mrp) mrpEl.textContent = p.mrp;
+          const saveEl = document.getElementById(`prod-saving-${p.id}`);
+          if (saveEl && p.saving) saveEl.textContent = p.saving;
+        });
+
+        // Also dynamically populate Quick Inquiry dropdown
+        const prodSelect = document.getElementById('custProduct');
+        if (prodSelect && cfg.products.length > 0) {
+          prodSelect.innerHTML = "";
+          cfg.products.forEach(p => {
+            const opt = document.createElement('option');
+            opt.value = `${p.title} (${p.price})`;
+            opt.textContent = `${p.title} (${p.price})`;
+            prodSelect.appendChild(opt);
+          });
+          const optConsult = document.createElement('option');
+          optConsult.value = "Free Diet & Supplement Consultation";
+          optConsult.textContent = "फक्त मार्गदर्शन हवे आहे (Free Consultation)";
+          prodSelect.appendChild(optConsult);
+        }
+      }
+    }
+
     // 1. WhatsApp Quick Inquiry Submission
     function handleInquirySubmit(e) {
       e.preventDefault();
@@ -839,7 +904,7 @@
 
       const message = `Namaskar PowerHouse Nutrition (Gargoti),\n\nMi landing page varun inquiry karat aahe:\n👤 Naav: ${name}\n📱 Phone: ${phone}\n🏋️ Product Choice: ${product}\n\nKrupaya mala ya supplement che best rates ani store pickup/delivery chi mahiti sanga!`;
       
-      const storeWhatsApp = "919876543210";
+      const storeWhatsApp = window.STORE_WA_NUMBER || "919876543210";
       const waUrl = `https://wa.me/${storeWhatsApp}?text=${encodeURIComponent(message)}`;
       window.open(waUrl, '_blank');
     }
@@ -939,6 +1004,7 @@
 
     // Initialize when DOM is ready
     window.addEventListener('DOMContentLoaded', () => {
+      loadSiteConfig();
       initHeroParticles();
       initTouchSupport();
 
@@ -949,6 +1015,7 @@
     });
 
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      loadSiteConfig();
       initHeroParticles();
       initTouchSupport();
       if (typeof VanillaTilt !== 'undefined') {
