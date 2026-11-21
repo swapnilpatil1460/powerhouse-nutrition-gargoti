@@ -65,58 +65,21 @@
 
     /* Soil spark atmosphere */
     .bg-akhada-gradient {
-      background: radial-gradient(circle at 75% 35%, rgba(234, 88, 12, 0.32) 0%, rgba(185, 28, 28, 0.18) 35%, rgba(16, 8, 4, 1) 75%);
+      background: radial-gradient(circle at 75% 35%, rgba(234, 88, 12, 0.28) 0%, rgba(185, 28, 28, 0.15) 35%, rgba(16, 8, 4, 1) 72%);
     }
 
-    /* Seamless Hero Cover Fading */
-    .hero-cover-wrap {
+    /* Ambient Hero Glow */
+    .hero-glow-halo {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 1;
-    }
-    @media (min-width: 1024px) {
-      .hero-cover-wrap {
-        width: 68%;
-      }
-    }
-    .hero-cover-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: right 25%;
-      opacity: 0.88;
-      filter: saturate(1.15) contrast(1.1);
-    }
-    .hero-fade-left {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, #100804 0%, #100804 15%, rgba(16,8,4,0.85) 45%, rgba(16,8,4,0.3) 75%, transparent 100%);
-    }
-    .hero-fade-bottom {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, #100804 0%, rgba(16,8,4,0.95) 15%, transparent 45%);
-    }
-    .hero-fade-top {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, #100804 0%, rgba(16,8,4,0.7) 8%, transparent 30%);
-    }
-    .hero-radial-glow {
-      position: absolute;
-      right: 15%;
-      top: 25%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(234, 88, 12, 0.25) 0%, rgba(185, 28, 28, 0.1) 45%, transparent 70%);
+      right: 5%;
+      top: 15%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(234, 88, 12, 0.3) 0%, rgba(185, 28, 28, 0.15) 40%, transparent 70%);
       border-radius: 9999px;
-      filter: blur(40px);
+      filter: blur(50px);
       pointer-events: none;
+      z-index: 0;
     }
 
     /* Glassmorphism */
@@ -175,36 +138,27 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION (COVER PAGE WITH SEAMLESS FADING) ================= -->
-  <section id="home" class="relative bg-akhada-gradient pt-8 pb-16 md:py-20 overflow-hidden min-h-[580px] flex flex-col justify-center">
+  <!-- ================= HERO SECTION (CRISP VISUAL WITH SEAMLESS BLENDED EDGES) ================= -->
+  <section id="home" class="relative bg-akhada-gradient pt-8 pb-16 md:py-16 overflow-hidden">
     
-    <!-- Seamless Background Hero Cover Image with Multi-Directional Gradient Fading -->
-    <div class="hero-cover-wrap">
-      <div class="hero-radial-glow"></div>
-      <img src="./assets/hero-cover-bg.png" 
-           alt="PowerHouse Nutrition Kolhapuri Pailwan Akhada Hero Cover" 
-           class="hero-cover-img">
-      <!-- Gradient faders ensuring seamless blend into #100804 -->
-      <div class="hero-fade-left"></div>
-      <div class="hero-fade-bottom"></div>
-      <div class="hero-fade-top"></div>
-    </div>
+    <!-- Ambient Red Soil Glow -->
+    <div class="hero-glow-halo"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       
-      <!-- Top Row: Main Headline + Ambient Cover Stage -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Top Row: Main Headline + Prominent Pailwan & Tub Visual -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Left Column: Copy & Value Proposition (7 cols) -->
-        <div class="lg:col-span-7 space-y-6 text-left">
+        <!-- Left Column: Copy & Value Proposition (6 cols) -->
+        <div class="lg:col-span-6 space-y-6 text-left">
           
-          <!-- Marathi Main Headline with Enhanced Text Contrast -->
+          <!-- Marathi Main Headline -->
           <div class="space-y-2">
-            <h1 class="marathi-title text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-white leading-tight tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+            <h1 class="marathi-title text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-white leading-tight tracking-tight drop-shadow-md">
               कोल्हापूरच्या ताकदीला,<br>
-              <span class="text-amber-400 drop-shadow-[0_2px_8px_rgba(245,158,11,0.5)]">अस्सल पोषणाची जोड!</span>
+              <span class="text-amber-400">अस्सल पोषणाची जोड!</span>
             </h1>
-            <p class="text-gray-200 text-sm sm:text-lg font-medium tracking-wide drop-shadow-md">
+            <p class="text-gray-300 text-sm sm:text-lg font-medium tracking-wide">
               The Legacy of Akhada, The Power of Modern Nutrition
             </p>
           </div>
@@ -219,7 +173,7 @@
           </div>
 
           <!-- Highlight Tag / Offer Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-amber-500/60 text-amber-300 text-xs sm:text-sm font-black shadow-lg">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-red-500/20 border border-amber-500/50 text-amber-300 text-xs sm:text-sm font-black shadow-inner">
             <span>🏷️</span>
             <span>BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!</span>
           </div>
@@ -237,7 +191,7 @@
 
             <!-- Dark Secondary Button -->
             <a href="#products" 
-               class="px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-black/70 hover:bg-black/90 text-gray-200 font-bold text-sm sm:text-base border border-amber-600/40 hover:border-amber-500 transition-all flex items-center gap-2 shadow-lg">
+               class="px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-black/60 hover:bg-black/90 text-gray-200 font-bold text-sm sm:text-base border border-amber-600/40 hover:border-amber-500 transition-all flex items-center gap-2 shadow-lg">
               <span>आमचे सप्लीमेंट्स पहा ➔</span>
               <span class="text-xs font-normal text-gray-400 hidden sm:inline">(VIEW PRODUCTS)</span>
             </a>
@@ -246,7 +200,7 @@
           <!-- Trust Badges Row -->
           <div class="grid grid-cols-2 gap-4 pt-3 max-w-md">
             <!-- Badge 1: 100% Original Guarantee -->
-            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-amber-600/30">
+            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-amber-950/40 border border-amber-600/30">
               <div class="w-9 h-9 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
               </div>
@@ -257,7 +211,7 @@
             </div>
 
             <!-- Badge 2: Gargoti's Trusted / Lal Maticha Vishwas -->
-            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-red-600/30">
+            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-red-950/40 border border-red-600/30">
               <div class="w-9 h-9 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 shrink-0">
                 <span class="text-lg">🚩</span>
               </div>
@@ -270,20 +224,22 @@
 
         </div>
 
-        <!-- Right Column: Natural Cover Canvas with Floating Product Tag (5 cols) -->
-        <div class="lg:col-span-5 relative min-h-[280px] lg:min-h-[420px] flex flex-col justify-end items-center lg:items-end">
+        <!-- Right Column: Crisp, Fully Visible Pailwan with Gada & Tub (6 cols) -->
+        <div class="lg:col-span-6 relative flex flex-col items-center justify-center">
           
-          <!-- Floating Product Tag Pill over the background cover -->
-          <div class="p-3.5 rounded-2xl bg-black/75 backdrop-blur-md border border-amber-500/40 flex items-center gap-3.5 shadow-2xl hover:border-amber-400 transition-all transform hover:scale-105">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 font-black text-base shrink-0">
-              ⚡
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-black text-amber-400 tracking-wider uppercase">POWERHOUSE WHEY</span>
-                <span class="px-2 py-0.5 bg-amber-500 text-black text-[9px] font-black rounded uppercase">Top Seller</span>
+          <!-- Image has seamlessly feathered outer margins into #100804 (No box frame!) -->
+          <div class="relative w-full max-w-[480px] flex flex-col items-center">
+            <img src="./assets/pailwan-hero-crisp.png" 
+                 alt="Kolhapuri Pailwan with Gada and PowerHouse Whey Protein Tub in Akhada" 
+                 class="w-full h-auto object-contain filter drop-shadow-[0_15px_35px_rgba(234,88,12,0.35)] transform hover:scale-[1.02] transition-transform duration-500">
+            
+            <!-- Floating tag under the tub/athlete -->
+            <div class="mt-2 w-full p-3 rounded-xl bg-black/75 backdrop-blur-md border border-amber-500/40 flex items-center justify-between shadow-xl">
+              <div>
+                <div class="text-xs font-black text-amber-400 tracking-wider uppercase">POWERHOUSE WHEY</div>
+                <div class="marathi-title text-xs text-gray-200">२५g प्रोटीन • १००% ओरिजिनल • ०% भेसळ</div>
               </div>
-              <div class="marathi-title text-xs text-gray-200 mt-0.5">२५g प्रोटीन • १००% ओरिजिनल • ०% भेसळ</div>
+              <span class="px-2 py-1 bg-amber-500 text-black text-[10px] font-black rounded uppercase">Top Seller</span>
             </div>
           </div>
 
