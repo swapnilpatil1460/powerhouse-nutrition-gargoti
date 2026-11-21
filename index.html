@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerHouse Nutrition (गारगोटी) | कोल्हापूरच्या ताकदीला, अस्सल पोषणाची जोड!</title>
+  <meta name="description" content="PowerHouse Nutrition गारगोटी - १००% ओरिजिनल सप्लीमेंट्स, व्हे प्रोटीन आणि पैलवान स्ट्रेंथ स्टॅक. ऑनलाईनपेक्षा स्वस्त आणि अस्सल हमी!">
+  
+  <!-- Google Fonts: Poppins & Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['Poppins', '"Noto Sans Devanagari"', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#120a05',
+            brandDarker: '#0a0502',
+            brandCard: '#1a0f08',
+            brandAmber: '#f59e0b',
+            brandOrange: '#ea580c',
+            brandRed: '#b91c1c',
+            brandGreen: '#22c55e',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+      background-color: #100804;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    
+    .marathi-title {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+
+    /* Traditional Indian border pattern */
+    .akhada-pattern {
+      background-image: repeating-linear-gradient(45deg, #ea580c 0, #ea580c 4px, transparent 0, transparent 8px);
+      height: 4px;
+      opacity: 0.6;
+    }
+
+    /* Glow animation */
+    .glow-orange {
+      box-shadow: 0 0 25px rgba(234, 88, 12, 0.45);
+    }
+    
+    .glow-green {
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+    }
+
+    /* Soil spark atmosphere */
+    .bg-akhada-gradient {
+      background: radial-gradient(circle at 75% 35%, rgba(234, 88, 12, 0.28) 0%, rgba(185, 28, 28, 0.15) 35%, rgba(16, 8, 4, 1) 70%);
+    }
+
+    /* Glassmorphism */
+    .glass-card {
+      background: rgba(26, 15, 8, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-black">
+
+  <!-- ================= TOP NOTICE BAR ================= -->
+  <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-black font-extrabold text-xs md:text-sm py-1.5 px-4 text-center tracking-wide">
+    🚩 कोल्हापूर व गारगोटी परिसरातील पैलवान आणि खेळाडूंसाठी खास डिस्काउंट! ऑनलाईनपेक्षा स्वस्त आणि १००% अस्सल माल!
+  </div>
+
+  <!-- ================= NAVIGATION HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-[#120a05]/95 backdrop-blur-md border-b border-amber-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center p-2.5 shadow-lg group-hover:scale-105 transition-transform">
+          <!-- Stylized Dumbbell / Mace Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full text-black">
+            <path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-1.5">
+            PowerHouse <span class="text-amber-400">Nutrition</span>
+          </div>
+          <div class="text-xs text-amber-300 font-semibold marathi-title tracking-wider flex items-center gap-1">
+            (गारगोटी) • कोल्हापूर <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold marathi-title text-gray-200">
+        <a href="#home" class="text-amber-400 border-b-2 border-amber-400 pb-1">मुख्यपृष्ठ <span class="text-[11px] font-normal text-gray-400">(Home)</span></a>
+        <a href="#products" class="hover:text-amber-400 transition-colors pb-1">आमचे सप्लीमेंट्स <span class="text-[11px] font-normal text-gray-400">(Products)</span></a>
+        <a href="#verify" class="hover:text-amber-400 transition-colors pb-1">१००% अस्सल <span class="text-[11px] font-normal text-gray-400">(Verify)</span></a>
+        <a href="#contact" class="hover:text-amber-400 transition-colors pb-1">संपर्क <span class="text-[11px] font-normal text-gray-400">(Contact)</span></a>
+      </nav>
+
+      <!-- Header WhatsApp CTA -->
+      <a href="https://wa.me/919876543210?text=Namaskar%20PowerHouse%20Nutrition,%20mala%20protein%20supplement%20baddal%20mahiti%20havi%20aahe." 
+         target="_blank" 
+         class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-extrabold text-xs sm:text-sm shadow-md hover:shadow-amber-500/30 transition-all transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+        <span>आताच चौकशी करा</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION (MATCHING USER MOCKUP) ================= -->
+  <section id="home" class="relative bg-akhada-gradient pt-8 pb-16 md:py-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Row: Main Headline + Hero Pailwan & Tub Visual -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Marathi Main Headline -->
+          <div class="space-y-2">
+            <h1 class="marathi-title text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-white leading-tight tracking-tight drop-shadow-md">
+              कोल्हापूरच्या ताकदीला,<br>
+              <span class="text-amber-400">अस्सल पोषणाची जोड!</span>
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-lg font-medium tracking-wide">
+              The Legacy of Akhada, The Power of Modern Nutrition
+            </p>
+          </div>
+
+          <!-- Traditional akhada divider line -->
+          <div class="flex items-center gap-3">
+            <div class="w-16 h-0.5 bg-orange-500"></div>
+            <p class="marathi-title text-sm sm:text-base font-bold text-orange-400 uppercase tracking-wider">
+              मर्दांची भूमी, पैलवानांचा वारसा!
+            </p>
+            <div class="flex-1 h-0.5 bg-gradient-to-r from-orange-500/60 to-transparent"></div>
+          </div>
+
+          <!-- Highlight Tag / Offer Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-red-500/20 border border-amber-500/50 text-amber-300 text-xs sm:text-sm font-black shadow-inner">
+            <span>🏷️</span>
+            <span>BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <!-- Green WhatsApp Button -->
+            <a href="https://wa.me/919876543210?text=Namaskar,%20PowerHouse%20Nutrition%20Gargoti%20madhe%20Whey%20Protein%20ani%20Offers%20baddal%20mahiti%20sanga." 
+               target="_blank"
+               class="px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-extrabold text-sm sm:text-base flex items-center gap-2.5 border border-green-400/40 glow-green transition-all transform hover:-translate-y-0.5">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+              <span>व्हॉट्सॲपवर चौकशी करा 💬</span>
+              <span class="text-xs font-normal opacity-90 hidden sm:inline">(INQUIRE ON WHATSAPP)</span>
+            </a>
+
+            <!-- Dark Secondary Button -->
+            <a href="#products" 
+               class="px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl bg-black/60 hover:bg-black/90 text-gray-200 font-bold text-sm sm:text-base border border-amber-600/40 hover:border-amber-500 transition-all flex items-center gap-2">
+              <span>आमचे सप्लीमेंट्स पहा ➔</span>
+              <span class="text-xs font-normal text-gray-400 hidden sm:inline">(VIEW PRODUCTS)</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Row -->
+          <div class="grid grid-cols-2 gap-4 pt-3 max-w-md">
+            <!-- Badge 1: 100% Original Guarantee -->
+            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-amber-950/40 border border-amber-600/30">
+              <div class="w-9 h-9 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+              </div>
+              <div class="leading-tight">
+                <div class="marathi-title font-black text-xs sm:text-sm text-white">अस्सल हमी</div>
+                <div class="text-[10px] text-amber-300/80">100% Original Guarantee</div>
+              </div>
+            </div>
+
+            <!-- Badge 2: Gargoti's Trusted / Lal Maticha Vishwas -->
+            <div class="flex items-center gap-3 p-2.5 rounded-xl bg-red-950/40 border border-red-600/30">
+              <div class="w-9 h-9 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 shrink-0">
+                <span class="text-lg">🚩</span>
+              </div>
+              <div class="leading-tight">
+                <div class="marathi-title font-black text-xs sm:text-sm text-white">लाल मातीचा विश्वास</div>
+                <div class="text-[10px] text-red-300/80">Gargoti's Trusted Store</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Hero Visual (Pailwan + PowerHouse Whey Tub) (5 cols) -->
+        <div class="lg:col-span-5 relative flex justify-center items-center">
+          <!-- Backing glow halo -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-orange-600/30 via-red-600/20 to-amber-500/20 rounded-full blur-3xl -z-10"></div>
+          
+          <div class="relative w-full max-w-md rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-black/40 group">
+            <img src="./assets/wrestler-tub.jpg" 
+                 alt="Kolhapuri Pailwan with Gada and PowerHouse Whey Protein Tub in Akhada" 
+                 class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+            
+            <!-- Bottom floating tag over image -->
+            <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-black/75 backdrop-blur-md border border-amber-500/40 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-black text-amber-400 tracking-wider uppercase">POWERHOUSE WHEY</div>
+                <div class="marathi-title text-xs text-gray-200">२५g प्रोटीन • १००% ओरिजिनल • ०% भेसळ</div>
+              </div>
+              <span class="px-2 py-1 bg-amber-500 text-black text-[10px] font-black rounded uppercase">Top Seller</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Product Stack Card + Quick Inquiry Order Form (Matching Mockup) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-12 items-stretch">
+        
+        <!-- Bottom Left: Pailwan Strength Stack Card (5 cols) -->
+        <div class="md:col-span-5 glass-card rounded-2xl p-5 flex items-center gap-4 border border-amber-600/30 shadow-lg">
+          <div class="w-28 h-24 rounded-xl overflow-hidden bg-black/60 border border-amber-700/40 shrink-0 flex items-center justify-center p-1">
+            <img src="./assets/product-stack.jpg" alt="Pailwan Strength Stack" class="w-full h-full object-contain">
+          </div>
+          <div class="space-y-1">
+            <div class="text-xs font-black tracking-wider text-amber-400 uppercase flex items-center gap-1.5">
+              <span>🔥 COMBO STACK</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-black text-white">Pailwan Strength Stack</h3>
+            <p class="marathi-title text-xs sm:text-sm text-gray-300 font-semibold leading-tight">
+              लाल मातीतून तयार झालेली मर्दानी ताकद!
+            </p>
+            <p class="text-[11px] text-amber-200/70">
+              (Mardaani strength born of the red soil!)
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Right: Quick Inquiry & Order Form (7 cols) -->
+        <div class="md:col-span-7 glass-card rounded-2xl p-6 border-2 border-amber-500/80 glow-orange shadow-2xl relative">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-amber-900/60 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-ping"></span>
+              <h3 class="marathi-title text-base sm:text-lg font-black text-amber-400">
+                चौकशी आणि ऑर्डर <span class="text-xs font-normal text-gray-300 uppercase">(QUICK INQUIRY)</span>
+              </h3>
+            </div>
+            <span class="text-[11px] text-gray-400">२ मिनिटात व्हॉट्सॲपवर रिप्लाय मिळेल</span>
+          </div>
+
+          <form id="quickInquiryForm" class="space-y-4" onsubmit="handleInquirySubmit(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-gray-300 marathi-title mb-1">नाव (Name)</label>
+                <input type="text" id="custName" required placeholder="उदा. सागर पाटील" 
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-black/70 border border-amber-600/40 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-300 marathi-title mb-1">फोन नंबर (WhatsApp)</label>
+                <input type="tel" id="custPhone" required placeholder="उदा. 9876543210" 
+                       class="w-full px-3.5 py-2.5 rounded-xl bg-black/70 border border-amber-600/40 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 marathi-title mb-1">सप्लीमेंट निवडा (Select Product)</label>
+              <select id="custProduct" 
+                      class="w-full px-3.5 py-2.5 rounded-xl bg-black/80 border border-amber-600/40 text-white text-sm focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all">
+                <option value="PowerHouse 100% Whey Protein (25g Protein)">PowerHouse 100% Whey Protein (25g Protein • ₹2,499)</option>
+                <option value="Pailwan Strength Stack (Whey + Creatine + Ashwagandha)">Pailwan Strength Stack (Whey + Creatine + Stack Combo • ₹3,499)</option>
+                <option value="Akhada High Calorie Mass Gainer">Akhada High Calorie Mass Gainer (वजन व ताकद वाढवण्यासाठी • ₹1,899)</option>
+                <option value="Micronized Pure Creatine Monohydrate">Micronized Pure Creatine Monohydrate (स्पोर्ट्स पॉवर • ₹799)</option>
+                <option value="Plant Based Organic Protein">Plant Based Organic Vegan Protein (पचनास हलके • ₹2,399)</option>
+                <option value="Free Diet & Supplement Consultation">फक्त मार्गदर्शन हवे आहे (Free Consultation)</option>
+              </select>
+            </div>
+
+            <button type="submit" 
+                    class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-green-500/30 transition-all transform hover:-translate-y-0.5">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+              <span>व्हॉट्सॲपवर मेसेज पाठवा 💬</span>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY POWERHOUSE NUTRITION (VERIFY SECTION) ================= -->
+  <section id="verify" class="py-16 bg-[#0a0502] border-t border-b border-amber-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-black tracking-widest uppercase text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+          १००% ऑथेंटिक & अस्सल हमी
+        </span>
+        <h2 class="marathi-title text-2xl sm:text-4xl font-black text-white">
+          ऑनलाईन बनावट सप्लीमेंट्सला फसू नका!<br>
+          <span class="text-amber-400">गारगोटीमध्ये थेट दुकान, खात्रीशीर निकाल!</span>
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base">
+          बाजारात ६०% पेक्षा जास्त सप्लीमेंट्स बनावट आहेत. PowerHouse Nutrition मध्ये प्रत्येक डब्यावर अधिकृत इम्पोर्टर स्क्रॅच कोड आणि लॅब टेस्ट रिपोर्ट उपलब्ध आहे.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#150b06] border border-amber-800/30 hover:border-amber-500/60 transition-all text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 flex items-center justify-center text-amber-400 text-2xl group-hover:scale-110 transition-transform">
+            🛡️
+          </div>
+          <h3 class="marathi-title text-base sm:text-lg font-bold text-white">१००% ओरिजिनल सील</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            प्रत्येक डब्यावर अधिकृत ऑथेंटिसिटी स्क्रॅच कोड. जागेवर मोबाईलवरून व्हेरीफाय करून घ्या.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#150b06] border border-amber-800/30 hover:border-amber-500/60 transition-all text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-orange-500/20 flex items-center justify-center text-orange-400 text-2xl group-hover:scale-110 transition-transform">
+            💰
+          </div>
+          <h3 class="marathi-title text-base sm:text-lg font-bold text-white">ऑनलाईनपेक्षा स्वस्त</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Amazon व Flipkart पेक्षा थेट होलसेल दरात उपलब्ध. प्रत्येक खरेदीवर ₹३०० ते ₹७०० रुपयांची बचत.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#150b06] border border-amber-800/30 hover:border-amber-500/60 transition-all text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-red-500/20 flex items-center justify-center text-red-400 text-2xl group-hover:scale-110 transition-transform">
+            🌾
+          </div>
+          <h3 class="marathi-title text-base sm:text-lg font-bold text-white">पचनास हलके (Zero Bloat)</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            अँडेड डायजेस्टिव्ह एन्झाईम्स. पोट फुगणे, गॅस किंवा ॲसिडिटीचा त्रास नाही. शरीरात त्वरित शोषण.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#150b06] border border-amber-800/30 hover:border-amber-500/60 transition-all text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-green-500/20 flex items-center justify-center text-green-400 text-2xl group-hover:scale-110 transition-transform">
+            💪
+          </div>
+          <h3 class="marathi-title text-base sm:text-lg font-bold text-white">तज्ञांचे मोफत मार्गदर्शन</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            तुमचे वजन, व्यायाम आणि तालमीच्या वेळापत्रकानुसार कोणता सप्लीमेंट घ्यावा याचा योग्य सल्ला.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS SECTION ================= -->
+  <section id="products" class="py-16 bg-[#120a05]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-amber-900/40 gap-4">
+        <div>
+          <span class="text-xs font-black tracking-widest uppercase text-orange-400">BEST SELLERS</span>
+          <h2 class="marathi-title text-2xl sm:text-4xl font-black text-white mt-1">
+            आमचे लोकप्रिय सप्लीमेंट्स
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-400 max-w-md">
+          तालीम, जिम आणि दैनंदिन फिटनेससाठी लागणारे दर्जेदार व्हे प्रोटीन, मास गेनर आणि क्रिएटिन.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Product 1: PowerHouse Whey -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-amber-600/30 hover:border-amber-500 transition-all flex flex-col justify-between group">
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded-md bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[11px] font-black uppercase">
+                #1 Bestseller
+              </span>
+              <span class="text-xs text-green-400 font-bold">● In Stock (Gargoti)</span>
+            </div>
+            
+            <div class="h-44 w-full flex items-center justify-center bg-black/40 rounded-xl overflow-hidden">
+              <img src="./assets/wrestler-tub.jpg" alt="PowerHouse Whey" class="h-40 object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+
+            <div>
+              <h3 class="text-lg font-black text-white">PowerHouse 100% Whey Isolate</h3>
+              <p class="marathi-title text-xs text-amber-300 mt-0.5">२५g प्रोटीन • ५.५g BCAAs • झिरो शुगर</p>
+            </div>
+
+            <ul class="text-xs text-gray-300 space-y-1.5 pt-2 border-t border-amber-900/40">
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> जलद मसल रिकव्हरी व ताकद</li>
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> डायजेस्टिव्ह एन्झाईम्स (पचनास अत्यंत हलके)</li>
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> स्वादिष्ट रिच चॉकलेट व व्हॅनिला फ्लेवर</li>
+            </ul>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-2xl font-black text-white">₹२,४९९</span>
+                <span class="text-xs text-gray-500 line-through ml-1.5">₹३,२९९</span>
+              </div>
+              <span class="text-xs font-bold text-amber-400">बचत ₹८००</span>
+            </div>
+            <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20PowerHouse%20100%25%20Whey%20Protein%20order%20karaycha%20aahe." 
+               target="_blank" 
+               class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-extrabold text-sm flex items-center justify-center gap-2 transition-all">
+              <span>व्हॉट्सॲपवर ऑर्डर करा</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2: Pailwan Strength Stack -->
+        <div class="glass-card rounded-2xl overflow-hidden border-2 border-orange-500/80 hover:border-orange-400 transition-all flex flex-col justify-between glow-orange relative group">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-red-600 to-orange-600 text-white font-black text-[10px] uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+            Most Recommended
+          </div>
+
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded-md bg-orange-500/20 border border-orange-500/40 text-orange-300 text-[11px] font-black uppercase">
+                Pailwan Combo
+              </span>
+              <span class="text-xs text-green-400 font-bold">● In Stock (Gargoti)</span>
+            </div>
+            
+            <div class="h-44 w-full flex items-center justify-center bg-black/40 rounded-xl overflow-hidden p-2">
+              <img src="./assets/product-stack.jpg" alt="Pailwan Strength Stack" class="h-36 object-contain group-hover:scale-105 transition-transform duration-500">
+            </div>
+
+            <div>
+              <h3 class="text-lg font-black text-white">Pailwan Akhada Strength Stack</h3>
+              <p class="marathi-title text-xs text-orange-300 mt-0.5">व्हे प्रोटीन + क्रिएटिन + अश्वगंधा बूस्टर</p>
+            </div>
+
+            <ul class="text-xs text-gray-300 space-y-1.5 pt-2 border-t border-amber-900/40">
+              <li class="flex items-center gap-1.5"><span class="text-orange-400">✓</span> लाल मातीतील तालमीसाठी स्फोटक ताकद</li>
+              <li class="flex items-center gap-1.5"><span class="text-orange-400">✓</span> स्टॅमिना आणि स्नायूंची झटपट वाढ</li>
+              <li class="flex items-center gap-1.5"><span class="text-orange-400">✓</span> सोबत १ फ्री शेकर कप मोफत!</li>
+            </ul>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-2xl font-black text-white">₹३,४९९</span>
+                <span class="text-xs text-gray-500 line-through ml-1.5">₹४,५९९</span>
+              </div>
+              <span class="text-xs font-bold text-orange-400">बचत ₹१,१००</span>
+            </div>
+            <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pailwan%20Strength%20Stack%20combo%20order%20karaycha%20aahe." 
+               target="_blank" 
+               class="w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition-all">
+              <span>व्हॉट्सॲपवर ऑफर मिळवा</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3: Pure Micronized Creatine -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-amber-600/30 hover:border-amber-500 transition-all flex flex-col justify-between group">
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+              <span class="px-2.5 py-1 rounded-md bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[11px] font-black uppercase">
+                Power Booster
+              </span>
+              <span class="text-xs text-green-400 font-bold">● In Stock (Gargoti)</span>
+            </div>
+            
+            <div class="h-44 w-full flex items-center justify-center bg-black/40 rounded-xl overflow-hidden">
+              <div class="w-28 h-28 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-600/20 flex flex-col items-center justify-center border border-amber-500/30 group-hover:scale-105 transition-transform">
+                <span class="text-3xl">⚡</span>
+                <span class="text-[11px] font-black text-amber-300 mt-1">CREATINE</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-black text-white">Micronized Pure Creatine</h3>
+              <p class="marathi-title text-xs text-amber-300 mt-0.5">१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g)</p>
+            </div>
+
+            <ul class="text-xs text-gray-300 space-y-1.5 pt-2 border-t border-amber-900/40">
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> हेवी लिफ्टिंग व कुस्तीसाठी प्रचंड ऊर्जा</li>
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> मसल व्हॉल्यूम व ताकद वाढवते</li>
+              <li class="flex items-center gap-1.5"><span class="text-amber-400">✓</span> पाण्यात पूर्णपणे विरघळते (No Grit)</li>
+            </ul>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-2xl font-black text-white">₹७९९</span>
+                <span class="text-xs text-gray-500 line-through ml-1.5">₹१,१९९</span>
+              </div>
+              <span class="text-xs font-bold text-amber-400">बचत ₹४००</span>
+            </div>
+            <a href="https://wa.me/919876543210?text=Namaskar,%20mala%20Pure%20Creatine%20Monohydrate%20baddal%20mahiti%20havi%20aahe." 
+               target="_blank" 
+               class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-extrabold text-sm flex items-center justify-center gap-2 transition-all">
+              <span>व्हॉट्सॲपवर ऑर्डर करा</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="py-16 bg-[#0a0502] border-t border-amber-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="marathi-title text-2xl sm:text-3xl font-black text-white">
+          कोल्हापूरच्या पैलवानांचा विश्वास ⭐⭐⭐⭐⭐
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-400 mt-1">
+          स्थानिक तालमीतील पैलवान आणि जिम ॲथलीट्सचे अनुभव.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        
+        <div class="p-6 rounded-2xl bg-[#140b06] border border-amber-800/30 space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">
+            ★★★★★ <span class="text-xs text-gray-400 ml-2">Verified Athlete</span>
+          </div>
+          <p class="marathi-title text-sm text-gray-200 leading-relaxed">
+            "मी आधी ऑनलाईन प्रोटीन मागवायचो, पण बऱ्याचदा पोट फुगायचे आणि शंका वाटायची. गारगोटीत PowerHouse Nutrition सुरू झाल्यापासून थेट दुकानातून व्हे प्रोटीन घेतो. पचन एकदम हलके आहे आणि निकाल जबरदस्त आहेत!"
+          </p>
+          <div class="pt-2 border-t border-amber-900/30">
+            <div class="font-bold text-white text-sm">पैलवान विक्रम पाटील</div>
+            <div class="text-xs text-amber-400">गारगोटी तालीम, कोल्हापूर</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#140b06] border border-amber-800/30 space-y-3">
+          <div class="flex items-center gap-1 text-amber-400 text-sm">
+            ★★★★★ <span class="text-xs text-gray-400 ml-2">Gym Lifter</span>
+          </div>
+          <p class="marathi-title text-sm text-gray-200 leading-relaxed">
+            "ऑनलाईन पेक्षा स्वस्त दर आणि जागेवर इम्पोर्टर स्टिकर स्क्रॅच करून चेक करता येतो, हा सर्वात मोठा फायदा आहे. सप्लीमेंटबद्दल योग्य सल्ला मिळतो. कोल्हापूर-गारगोटीतील प्रत्येकाने एकदा नक्की भेट द्यावी!"
+          </p>
+          <div class="pt-2 border-t border-amber-900/30">
+            <div class="font-bold text-white text-sm">प्रशांत देसाई</div>
+            <div class="text-xs text-amber-400">फिटनेस ट्रेनर, भुदरगड</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STORE LOCATION & CONTACT ================= -->
+  <section id="contact" class="py-16 bg-[#120a05] border-t border-amber-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 md:p-12 border border-amber-500/40 shadow-2xl relative overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="space-y-4">
+            <span class="text-xs font-black tracking-widest uppercase text-amber-400 bg-amber-500/20 px-3 py-1 rounded-full">
+              थेट भेट द्या
+            </span>
+            <h2 class="marathi-title text-2xl sm:text-4xl font-black text-white">
+              PowerHouse Nutrition स्टोअर
+            </h2>
+            <div class="space-y-3 text-sm text-gray-300">
+              <p class="flex items-start gap-2.5">
+                <span class="text-lg">📍</span>
+                <span><strong>पत्ता:</strong> हिंद तारा कॉम्प्लेक्स, साई मंदिराजवळ, गारगोटी, ता. भुदरगड, जि. कोल्हापूर - ४१६२०९</span>
+              </p>
+              <p class="flex items-center gap-2.5">
+                <span class="text-lg">⏰</span>
+                <span><strong>वेळ:</strong> सकाळी ९:०० ते रात्री ९:०० (दररोज चालू)</span>
+              </p>
+              <p class="flex items-center gap-2.5">
+                <span class="text-lg">📞</span>
+                <span><strong>हेल्पलाईन / WhatsApp:</strong> +९१ ९८७६५ ४३२१०</span>
+              </p>
+            </div>
+
+            <div class="pt-2 flex flex-wrap gap-3">
+              <a href="https://maps.google.com" target="_blank" 
+                 class="px-5 py-2.5 rounded-xl bg-black border border-amber-500 text-amber-300 font-bold text-xs flex items-center gap-2 hover:bg-amber-950/40 transition-colors">
+                <span>Google Maps वर पत्ता पहा 🗺️</span>
+              </a>
+              <a href="tel:+919876543210" 
+                 class="px-5 py-2.5 rounded-xl bg-amber-500 text-black font-extrabold text-xs flex items-center gap-2 hover:bg-amber-400 transition-colors">
+                <span>थेट फोन करा 📞</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Highlight Promo Card -->
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-amber-950/80 to-red-950/80 border border-amber-600/40 text-center space-y-3">
+            <span class="text-3xl">🚩</span>
+            <h3 class="marathi-title text-xl font-black text-white">मर्दांची भूमी, पैलवानांचा वारसा!</h3>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              आपल्या तालमीतील आणि जिममधील भावांसाठी १००% अस्सल न्यूट्रिशन देण्याचा आमचा निर्धार आहे. आजच भेटा किंवा व्हॉट्सॲपवर मेसेज करा!
+            </p>
+            <div class="pt-2 text-amber-400 font-black text-base marathi-title tracking-wider">
+              🚩 जय महाराष्ट्र! 🚩
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER / LOCATION BAR (MATCHING MOCKUP) ================= -->
+  <footer class="bg-[#080402] border-t border-amber-950 py-4 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-2">
+      <div class="flex items-center gap-2">
+        <span>📍</span>
+        <span class="marathi-title font-semibold text-gray-300">हिंद तारा कॉम्प्लेक्स, साई मंदिराजवळ, गारगोटी, कोल्हापूर</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-amber-400 font-bold">🚩 जय महाराष्ट्र!</span>
+        <span>•</span>
+        <span>© 2026 PowerHouse Nutrition (गारगोटी). All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING STICKY WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/919876543210?text=Namaskar%20PowerHouse%20Nutrition,%20mala%20protein%20offer%20baddal%20mahiti%20havi%20aahe." 
+     target="_blank"
+     aria-label="Chat on WhatsApp" 
+     class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-green-500 hover:bg-green-400 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform glow-green">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+  </a>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const product = document.getElementById('custProduct').value;
+
+      // Construct pre-filled WhatsApp message
+      const message = `Namaskar PowerHouse Nutrition (Gargoti),\n\nMi landing page varun inquiry karat aahe:\n👤 Naav: ${name}\n📱 Phone: ${phone}\n🏋️ Product Choice: ${product}\n\nKrupaya mala ya supplement che best rates ani offer sanga!`;
+      
+      const storeWhatsAppNumber = "919876543210"; // Replace with your actual WhatsApp phone number
+      const waUrl = `https://wa.me/${storeWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+      
+      // Open WhatsApp chat in new window
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
