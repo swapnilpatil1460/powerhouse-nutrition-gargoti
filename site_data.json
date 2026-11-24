@@ -1,6 +1,6 @@
 {
   "store": {
-    "name": "PowerHouse Nutrition",
+    "name": "The Protein Company",
     "location_short": "गारगोटी (कोल्हापूर)",
     "address": "हिंद तारा कॉम्प्लेक्स, साई मंदिराजवळ, गारगोटी, ता. भुदरगड, जि. कोल्हापूर - ४१६२०९",
     "timings": "सकाळी ९:०० ते रात्री ९:०० (दररोज चालू)",
@@ -13,13 +13,13 @@
   },
   "hero_offer_tag": "100% ORIGINAL IMPORTER CERTIFIED • CHEAPER & FASTER THAN ONLINE",
   "athlete_stack": {
-    "title": "PowerHouse Pro Strength Stack",
+    "title": "The Protein Company Pro Strength Stack",
     "tagline": "अल्ट्रा-प्युअर व्हे, मायक्रोनाईज्ड क्रिएटिन आणि शेकर कॉम्बो!",
     "english_sub": "(Engineered for Maximum Lean Muscle & Recovery)",
     "price": "₹३,४९९",
     "mrp": "₹४,५९९",
     "saving": "बचत ₹१,१००",
-    "image": "./assets/powerhouse-hero-lineup.jpg",
+    "image": "./assets/protein-hero-lineup.jpg",
     "in_stock": true,
     "benefits": [
       "100% कोल्ड-मायक्रोफिल्टर्ड व्हे (27g Protein per scoop)",
@@ -31,7 +31,7 @@
     {
       "id": "whey-isolate",
       "category": "protein",
-      "title": "PowerHouse 100% Whey Isolate",
+      "title": "The Protein Company 100% Whey Isolate",
       "marathi_desc": "२७g प्रोटीन • ५.५g BCAAs • ०% भेसळ • DigeZyme®",
       "price": "₹२,४९९",
       "mrp": "₹३,२९९",
@@ -49,7 +49,7 @@
     {
       "id": "athlete-stack",
       "category": "stack",
-      "title": "PowerHouse Pro Athlete Strength Stack",
+      "title": "The Protein Company Pro Athlete Strength Stack",
       "marathi_desc": "व्हे प्रोटीन (2kg) + क्रिएटिन (250g) + फ्री शेकर",
       "price": "₹३,४९९",
       "mrp": "₹४,५९९",
@@ -57,7 +57,7 @@
       "tag": "MOST POPULAR BUNDLE",
       "tag_color": "amber",
       "in_stock": true,
-      "image": "./assets/powerhouse-hero-lineup.jpg",
+      "image": "./assets/protein-hero-lineup.jpg",
       "benefits": [
         "जिम आणि हेवी लिफ्टिंगसाठी सर्वांत लोकप्रिय ऑल-इन-वन स्टॅक",
         "स्टॅमिना आणि लीन स्नायूंची वेगवान वाढ",
@@ -67,7 +67,7 @@
     {
       "id": "pure-creatine",
       "category": "strength",
-      "title": "PowerHouse Micronized Creapure Creatine",
+      "title": "The Protein Company Micronized Creapure Creatine",
       "marathi_desc": "१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g / ८३ सर्व्हिंग्स)",
       "price": "₹७९९",
       "mrp": "₹१,१९९",
@@ -85,7 +85,7 @@
     {
       "id": "mass-gainer",
       "category": "gainer",
-      "title": "PowerHouse High-Calorie Mass Gainer",
+      "title": "The Protein Company High-Calorie Mass Gainer",
       "marathi_desc": "१२०० कॅलरीज • ५०g प्रोटीन • कॉम्प्लेक्स कार्ब्स (३kg)",
       "price": "₹१,८९९",
       "mrp": "₹२,४९९",

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PowerHouse Nutrition | Client Admin Manager</title>
+  <title>The Protein Company | Store Owner Admin Portal</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,12 +22,12 @@
             marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
           },
           colors: {
-            brandDark: '#0c0d0e',
-            saffron: '#FF5A00',
-            amberGold: '#F59E0B',
-            waGreen: '#25D366',
-            surfaceCard: '#151619',
-            surfaceElevated: '#1c1d22',
+            brandDark: '#111827',
+            brandRed: '#E11D48',
+            brandRedHover: '#BE123C',
+            surfaceCard: '#18181B',
+            surfaceElevated: '#27272A',
+            softBorder: '#3F3F46',
           }
         }
       }
@@ -36,155 +36,160 @@
 
   <style>
     body {
-      background-color: #0c0d0e;
-      color: #f4f4f5;
+      background-color: #09090B;
+      color: #F4F4F5;
       font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
     }
     .input-admin {
-      background: #0d0e11;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #18181B;
+      border: 1px solid #3F3F46;
+      color: #FFFFFF;
       transition: all 0.2s;
     }
     .input-admin:focus {
-      border-color: #FF5A00;
-      box-shadow: 0 0 15px rgba(255, 90, 0, 0.35);
+      border-color: #E11D48;
+      box-shadow: 0 0 12px rgba(225, 29, 72, 0.35);
       outline: none;
     }
   </style>
 </head>
-<body class="selection:bg-saffron selection:text-black">
+<body class="selection:bg-brandRed selection:text-white">
 
   <!-- PIN Protection Modal (if locked) -->
-  <div id="pinModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="w-full max-w-sm rounded-3xl p-7 bg-surfaceCard border border-saffron/40 shadow-2xl text-center space-y-4">
-      <div class="w-14 h-14 mx-auto rounded-2xl bg-saffron/20 text-saffron flex items-center justify-center text-2xl font-black">
-        🔒
+  <div id="pinModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="w-full max-w-sm rounded-3xl p-8 bg-surfaceCard border border-softBorder shadow-2xl text-center space-y-5">
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-brandRed/20 text-brandRed flex items-center justify-center text-3xl font-black">
+        🔐
       </div>
       <div>
-        <h2 class="text-xl font-bold text-white">PowerHouse Admin</h2>
-        <p class="text-xs text-zinc-400 mt-1">वेबसाईटवरील प्रॉडक्ट्स व दर बदलण्यासाठी पासवर्ड प्रविष्ट करा</p>
+        <h2 class="text-xl font-black text-white tracking-tight">The Protein Company</h2>
+        <p class="text-xs text-zinc-400 mt-1 font-marathi">स्टोअर मालकांसाठी ऑफर किंमती व प्रॉडक्ट्स अपडेट पोर्टल</p>
       </div>
-      <input type="password" id="adminPinInput" placeholder="Default PIN: 1234" 
-             class="input-admin w-full px-4 py-3 rounded-xl text-center text-lg font-mono tracking-widest text-white">
-      <button onclick="checkPin()" class="w-full py-3 rounded-xl bg-gradient-to-r from-saffron to-amberGold text-black font-extrabold text-sm shadow-lg hover:brightness-110 transition-all">
-        लॉगिन करा (Login)
+      <input type="password" id="adminPinInput" placeholder="Enter PIN (Default: 1234)" 
+             class="input-admin w-full px-4 py-3.5 rounded-xl text-center text-xl font-mono tracking-widest">
+      <button onclick="checkPin()" class="w-full py-3.5 rounded-xl bg-brandRed hover:bg-brandRedHover text-white font-black text-sm tracking-wide shadow-lg transition-all">
+        लॉगिन करा (Login) ➔
       </button>
-      <p class="text-[11px] text-zinc-500">Default security PIN: <code class="text-amberGold">1234</code></p>
+      <p class="text-[11px] text-zinc-500">Security PIN: <code class="text-brandRed font-bold">1234</code></p>
     </div>
   </div>
 
   <!-- Admin Main Dashboard -->
   <div id="adminApp" class="min-h-screen hidden">
     
-    <!-- Header -->
-    <header class="sticky top-0 z-40 bg-surfaceCard/95 backdrop-blur-md border-b border-white/10 px-4 py-4">
+    <!-- Top Bar -->
+    <header class="sticky top-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-softBorder px-4 py-4">
       <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-saffron text-black font-black flex items-center justify-center text-lg shadow-md">
-            ⚡
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brandRed to-rose-700 text-white font-black flex items-center justify-center text-lg shadow-md font-display">
+            P
           </div>
           <div>
-            <h1 class="text-lg font-black text-white font-display">POWERHOUSE NUTRITION</h1>
-            <p class="text-xs text-amberGold font-semibold font-marathi">स्टोअर मॅनेजर • प्रॉडक्ट व ऑफर अपडेट्स</p>
+            <div class="flex items-center gap-2">
+              <h1 class="text-lg font-black text-white tracking-tight font-display">THE PROTEIN COMPANY</h1>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brandRed text-white">OWNER PORTAL</span>
+            </div>
+            <p class="text-xs text-zinc-400 font-marathi">गारगोटी स्टोअर • चालू सप्लीमेंट्सचे ऑफर दर व ऑफर्स अपडेट करा</p>
           </div>
         </div>
 
-        <div class="flex items-center gap-3">
-          <a href="./index.html" target="_blank" class="px-4 py-2 rounded-xl bg-surfaceElevated border border-white/10 text-zinc-300 text-xs font-bold hover:text-white transition-colors">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <a href="./index.html" target="_blank" class="px-4 py-2 rounded-xl bg-surfaceElevated border border-softBorder text-zinc-300 text-xs font-bold hover:text-white transition-colors">
             वेबसाईट पहा ↗
           </a>
-          <button onclick="saveAndExportJSON()" class="px-5 py-2 rounded-xl bg-gradient-to-r from-waGreen to-emerald-500 text-black font-black text-xs shadow-lg hover:brightness-110 flex items-center gap-2 transition-all">
-            <span>सेव्ह करा (Save & Download)</span> 💾
+          <button onclick="saveAndApply()" class="px-5 py-2 rounded-xl bg-brandRed hover:bg-brandRedHover text-white font-black text-xs shadow-lg flex items-center gap-1.5 transition-all">
+            <span>सेव्ह करा (Save Updates)</span> 💾
           </button>
         </div>
+
       </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 py-8 space-y-8">
       
-      <!-- Top Announcement Banner Editor -->
-      <section class="rounded-3xl p-6 bg-surfaceCard border border-white/10 shadow-xl space-y-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2 text-saffron font-bold text-sm">
+      <!-- Notification Box -->
+      <div id="statusAlert" class="hidden p-4 rounded-2xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">✅</span>
+          <span id="statusAlertText">बदल यशस्वीरीत्या सेव्ह झाले आहेत!</span>
+        </div>
+        <button onclick="document.getElementById('statusAlert').classList.add('hidden')" class="text-zinc-400 hover:text-white font-bold">✕</button>
+      </div>
+
+      <!-- Quick Action Cards (1-Click Publish to Live Site) -->
+      <section class="rounded-3xl p-6 bg-gradient-to-r from-zinc-900 to-zinc-950 border border-softBorder space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[10px] font-black tracking-widest text-brandRed uppercase">HOW TO PUBLISH TO LIVE WEBSITE</span>
+            <h3 class="text-base sm:text-lg font-black text-white mt-0.5">वेबसाईटवर नवीन किंमती सर्वांना दिसण्यासाठी १-क्लिक पद्धत:</h3>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="copyJsonToClipboard()" class="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 text-xs font-bold transition-all">
+              📋 Copy JSON Code
+            </button>
+            <a href="https://github.com/swapnilpatil1460/powerhouse-nutrition-gargoti/edit/main/site_data.json" 
+               target="_blank" 
+               class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow transition-all flex items-center gap-1.5">
+              <span>GitHub वर थेट सेव्ह करा ↗</span>
+            </a>
+          </div>
+        </div>
+        <p class="text-xs text-zinc-400 font-marathi leading-relaxed">
+          <strong>सोपी टीप:</strong> खाली दर बदलून <strong>"सेव्ह करा"</strong> दाबा, त्यानंतर <strong>"Copy JSON Code"</strong> दाबा व <strong>"GitHub वर थेट सेव्ह करा"</strong> वर क्लिक करून तिथे पेस्ट करा आणि <em>Commit changes</em> दाबा. ३० सेकंदात संपूर्ण इंटरनेटवर सर्व ग्राहकांना नवीन दर दिसतील!
+        </p>
+      </section>
+
+      <!-- 1. Current Protein Offer Prices Manager -->
+      <section class="rounded-3xl p-6 bg-surfaceCard border border-softBorder shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-softBorder">
+          <div>
+            <div class="flex items-center gap-2 text-brandRed font-black text-base">
+              <span>🥛</span>
+              <h2>CURRENT PROTEIN & SUPPLEMENT OFFER PRICES (सध्याचे सप्लीमेंट्सचे दर)</h2>
+            </div>
+            <p class="text-xs text-zinc-400 mt-0.5 font-marathi">येथे तुम्ही व्हे प्रोटीन, क्रिएटिन, मास गेनर व कॉम्बो स्टॅकचे दर थेट बदलू शकता.</p>
+          </div>
+          <span class="text-xs text-emerald-400 font-mono">Live Product Counter: 4 Items</span>
+        </div>
+
+        <div id="productsListContainer" class="space-y-4">
+          <!-- Dynamically Populated Product Editors -->
+        </div>
+      </section>
+
+      <!-- 2. Top Announcement Banner Editor -->
+      <section class="rounded-3xl p-6 bg-surfaceCard border border-softBorder shadow-xl space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-softBorder">
+          <div class="flex items-center gap-2 text-amber-400 font-black text-sm">
             <span>📢</span>
-            <h2>Top Announcement Bar (वरची मुख्य सूचना पट्टी)</h2>
+            <h2>Top Announcement Bar (वरची मुख्य सूचना व ऑफर पट्टी)</h2>
           </div>
           <span class="text-[11px] text-zinc-400">वेबसाईटच्या सर्वात वर दिसणारी घोषणा</span>
         </div>
         <textarea id="announcementInput" rows="2" 
-                  class="input-admin w-full p-3.5 rounded-xl text-white text-xs sm:text-sm font-marathi"></textarea>
+                  class="input-admin w-full p-3.5 rounded-xl text-xs sm:text-sm font-marathi"></textarea>
       </section>
 
-      <!-- Store Contact & WhatsApp Details -->
-      <section class="rounded-3xl p-6 bg-surfaceCard border border-white/10 shadow-xl space-y-4">
-        <div class="flex items-center gap-2 text-amberGold font-bold text-sm">
+      <!-- 3. Store Contact & WhatsApp Details -->
+      <section class="rounded-3xl p-6 bg-surfaceCard border border-softBorder shadow-xl space-y-4">
+        <div class="flex items-center gap-2 text-white font-black text-sm pb-3 border-b border-softBorder">
           <span>📱</span>
-          <h2>Store Contact & WhatsApp (संपर्क व व्हॉट्सॲप नंबर)</h2>
+          <h2>Store Contact & WhatsApp (ऑर्डर स्वीकारणारा व्हॉट्सॲप नंबर)</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs text-zinc-400 mb-1 font-marathi">WhatsApp नंबर (Country code सह)</label>
-            <input type="text" id="storeWa" placeholder="919876543210" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-xs font-mono">
+            <label class="block text-xs text-zinc-400 mb-1 font-marathi">WhatsApp नंबर (Country Code 91 सह)</label>
+            <input type="text" id="storeWa" placeholder="919876543210" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-xs font-mono">
           </div>
           <div>
             <label class="block text-xs text-zinc-400 mb-1 font-marathi">कॉलिंग फोन नंबर</label>
-            <input type="text" id="storePhone" placeholder="+91 9876543210" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-xs">
+            <input type="text" id="storePhone" placeholder="+91 9876543210" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-xs">
           </div>
           <div>
-            <label class="block text-xs text-zinc-400 mb-1 font-marathi">दुकान उघडण्याची वेळ</label>
-            <input type="text" id="storeTimings" placeholder="सकाळी ९:०० ते रात्री ९:००" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-xs font-marathi">
+            <label class="block text-xs text-zinc-400 mb-1 font-marathi">दुकान उघडे असण्याची वेळ</label>
+            <input type="text" id="storeTimings" placeholder="सकाळी ९:०० ते रात्री ९:००" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-xs font-marathi">
           </div>
-        </div>
-      </section>
-
-      <!-- Pro Strength Stack Offer Card Editor -->
-      <section class="rounded-3xl p-6 bg-surfaceCard border border-brandRed/40 shadow-xl space-y-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2 text-rose-500 font-bold text-sm">
-            <span>🔥</span>
-            <h2>Pro Athlete Strength Stack Offer (कॉम्बो स्टॅक दर)</h2>
-          </div>
-          <span class="text-xs text-waGreen font-semibold">Home Screen Highlight</span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div>
-            <label class="block text-xs text-zinc-400 mb-1 font-marathi">ऑफर किंमत (Offer Price)</label>
-            <input type="text" id="stackPrice" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-sm font-bold text-emerald-400">
-          </div>
-          <div>
-            <label class="block text-xs text-zinc-400 mb-1 font-marathi">मूळ MRP</label>
-            <input type="text" id="stackMrp" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-sm">
-          </div>
-          <div>
-            <label class="block text-xs text-zinc-400 mb-1 font-marathi">बचत मजकूर (Savings Tag)</label>
-            <input type="text" id="stackSaving" class="input-admin w-full px-3.5 py-2.5 rounded-xl text-white text-sm font-marathi">
-          </div>
-        </div>
-      </section>
-
-      <!-- Products Lineup Manager -->
-      <section class="rounded-3xl p-6 bg-surfaceCard border border-white/10 shadow-xl space-y-6">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2 text-white font-bold text-sm">
-            <span>📦</span>
-            <h2>Individual Products & Prices (सप्लीमेंट्स यादी व किंमती)</h2>
-          </div>
-          <span class="text-xs text-zinc-400">३ मुख्य बेस्ट सेलर सप्लीमेंट्स</span>
-        </div>
-
-        <div id="productsListContainer" class="space-y-4">
-          <!-- Dynamically populated product cards -->
-        </div>
-      </section>
-
-      <!-- How to Publish Changes Guide -->
-      <section class="rounded-3xl p-6 bg-surfaceElevated border border-white/10 space-y-3">
-        <h3 class="text-sm font-black text-amberGold flex items-center gap-2 font-display">
-          <span>ℹ️</span> HOW TO APPLY CHANGES TO LIVE WEBSITE
-        </h3>
-        <div class="text-xs text-zinc-300 space-y-2 leading-relaxed">
-          <p><strong>पद्धत १ (सर्वात सोपी - मोबाईल किंवा लॅपटॉपवरून):</strong> वर <em>"सेव्ह करा (Save & Download)"</em> वर क्लिक करा. डाऊनलोड झालेली <code class="text-amberGold">site_data.json</code> फाईल तुमच्या <code class="text-amberGold">c:\fb automation</code> फोल्डरमध्ये ठेवा आणि सेव्ह करा.</p>
-          <p><strong>पद्धत २ (GitHub वरून थेट अपडेट):</strong> तुमच्या GitHub रिपॉझिटरीमध्ये जा, <code class="text-amberGold">site_data.json</code> उघडा, पेन (Edit) आयकॉनवर क्लिक करा, नवीन दर टाईप करा आणि <strong>Commit changes</strong> दाबा. ३० सेकंदात लाईव्ह वेबसाईट अपडेट होईल!</p>
         </div>
       </section>
 
@@ -209,8 +214,18 @@
 
     // Load initial JSON
     async function loadData() {
+      // Check localStorage first
+      const cached = localStorage.getItem('tpc_site_data');
+      if (cached) {
+        try {
+          siteConfig = JSON.parse(cached);
+          populateForm();
+          return;
+        } catch(e) {}
+      }
+
       try {
-        const res = await fetch('./site_data.json');
+        const res = await fetch('./site_data.json?v=' + Date.now());
         siteConfig = await res.json();
       } catch (e) {
         console.error("Using fallback data", e);
@@ -222,16 +237,13 @@
     function populateForm() {
       if (!siteConfig) return;
 
-      document.getElementById('announcementInput').value = siteConfig.announcement.text;
-      document.getElementById('storeWa').value = siteConfig.store.whatsapp_number;
-      document.getElementById('storePhone').value = siteConfig.store.phone;
-      document.getElementById('storeTimings').value = siteConfig.store.timings;
-
-      const stack = siteConfig.athlete_stack || siteConfig.pailwan_stack;
-      if (stack) {
-        document.getElementById('stackPrice').value = stack.price || '';
-        document.getElementById('stackMrp').value = stack.mrp || '';
-        document.getElementById('stackSaving').value = stack.saving || '';
+      if (siteConfig.announcement) {
+        document.getElementById('announcementInput').value = siteConfig.announcement.text || '';
+      }
+      if (siteConfig.store) {
+        document.getElementById('storeWa').value = siteConfig.store.whatsapp_number || '919876543210';
+        document.getElementById('storePhone').value = siteConfig.store.phone || '+91 9876543210';
+        document.getElementById('storeTimings').value = siteConfig.store.timings || 'सकाळी ९:०० ते रात्री ९:००';
       }
 
       renderProductsList();
@@ -241,29 +253,46 @@
       const container = document.getElementById('productsListContainer');
       container.innerHTML = "";
 
+      if (!siteConfig.products) return;
+
       siteConfig.products.forEach((prod, index) => {
         const card = document.createElement('div');
-        card.className = "p-5 rounded-2xl bg-surfaceElevated border border-white/5 space-y-3";
+        card.className = "p-5 rounded-2xl bg-surfaceElevated border border-softBorder space-y-4";
         card.innerHTML = `
-          <div class="flex items-center justify-between pb-2 border-b border-white/10">
-            <span class="text-xs font-black text-amberGold uppercase">#0${index + 1} • ${prod.title}</span>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-zinc-700 gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-md bg-brandRed text-white text-[10px] font-black flex items-center justify-center font-mono">0${index + 1}</span>
+              <span class="text-sm font-extrabold text-white">${prod.title}</span>
+            </div>
             <label class="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-              <input type="checkbox" ${prod.in_stock ? 'checked' : ''} onchange="toggleStock(${index}, this.checked)" class="accent-emerald-500 rounded">
-              <span>स्टॉकमध्ये उपलब्ध (In Stock)</span>
+              <input type="checkbox" ${prod.in_stock ? 'checked' : ''} onchange="toggleStock(${index}, this.checked)" class="accent-rose-500 rounded w-4 h-4">
+              <span class="${prod.in_stock ? 'text-emerald-400 font-bold' : 'text-zinc-500'}">स्टॉकमध्ये उपलब्ध (In Stock)</span>
             </label>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label class="block text-[11px] text-zinc-400 mb-1">किंमत (Offer Rate)</label>
-              <input type="text" value="${prod.price}" onchange="updateProductField(${index}, 'price', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs font-bold text-emerald-400">
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">ऑफर विक्री किंमत (Offer Price) <span class="text-brandRed">*</span></label>
+              <input type="text" value="${prod.price}" onchange="updateProductField(${index}, 'price', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm font-bold text-emerald-400">
             </div>
             <div>
-              <label class="block text-[11px] text-zinc-400 mb-1">MRP</label>
-              <input type="text" value="${prod.mrp}" onchange="updateProductField(${index}, 'mrp', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs">
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">छापील MRP किंमत</label>
+              <input type="text" value="${prod.mrp}" onchange="updateProductField(${index}, 'mrp', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm text-zinc-300">
             </div>
             <div>
-              <label class="block text-[11px] text-zinc-400 mb-1">बचत (Discount Tag)</label>
-              <input type="text" value="${prod.saving}" onchange="updateProductField(${index}, 'saving', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs font-marathi">
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">बचत टॅग (Discount Tag)</label>
+              <input type="text" value="${prod.saving}" onchange="updateProductField(${index}, 'saving', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm text-rose-400 font-marathi">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div>
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">प्रॉडक्टचे नाव (Product Title)</label>
+              <input type="text" value="${prod.title}" onchange="updateProductField(${index}, 'title', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs text-zinc-200">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">वर्णन (Description / Specs)</label>
+              <input type="text" value="${prod.marathi_desc || ''}" onchange="updateProductField(${index}, 'marathi_desc', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs text-zinc-200 font-marathi">
             </div>
           </div>
         `;
@@ -279,24 +308,25 @@
       siteConfig.products[index].in_stock = status;
     }
 
-    // Save and export updated JSON file
-    function saveAndExportJSON() {
-      // Gather top inputs
+    // Save changes to localStorage and prepare JSON
+    function saveAndApply() {
       siteConfig.announcement.text = document.getElementById('announcementInput').value;
       siteConfig.store.whatsapp_number = document.getElementById('storeWa').value;
       siteConfig.store.phone = document.getElementById('storePhone').value;
       siteConfig.store.timings = document.getElementById('storeTimings').value;
 
-      if (!siteConfig.athlete_stack) siteConfig.athlete_stack = {};
-      siteConfig.athlete_stack.price = document.getElementById('stackPrice').value;
-      siteConfig.athlete_stack.mrp = document.getElementById('stackMrp').value;
-      siteConfig.athlete_stack.saving = document.getElementById('stackSaving').value;
-      if (siteConfig.pailwan_stack) {
-        siteConfig.pailwan_stack.price = siteConfig.athlete_stack.price;
-        siteConfig.pailwan_stack.mrp = siteConfig.athlete_stack.mrp;
-        siteConfig.pailwan_stack.saving = siteConfig.athlete_stack.saving;
+      // Update athlete_stack price if matching product exists
+      const stackProd = siteConfig.products.find(p => p.id === 'athlete-stack');
+      if (stackProd && siteConfig.athlete_stack) {
+        siteConfig.athlete_stack.price = stackProd.price;
+        siteConfig.athlete_stack.mrp = stackProd.mrp;
+        siteConfig.athlete_stack.saving = stackProd.saving;
       }
 
+      // 1. Cache to localStorage for instant preview
+      localStorage.setItem('tpc_site_data', JSON.stringify(siteConfig, null, 2));
+
+      // 2. Trigger file download
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(siteConfig, null, 2));
       const dlAnchor = document.createElement('a');
       dlAnchor.setAttribute("href", dataStr);
@@ -305,7 +335,25 @@
       dlAnchor.click();
       dlAnchor.remove();
 
-      alert("✅ अपडेटेड site_data.json फाईल डाऊनलोड झाली आहे!\nही फाईल तुमच्या c:\\fb automation फोल्डरमध्ये ठेवा.");
+      // Show alert
+      const alertBox = document.getElementById('statusAlert');
+      document.getElementById('statusAlertText').textContent = "✅ ऑफर दर यशस्वीरीत्या सेव्ह झाले आहेत! नवीन site_data.json फाईल डाऊनलोड झाली आहे.";
+      alertBox.classList.remove('hidden');
+    }
+
+    function copyJsonToClipboard() {
+      if (!siteConfig) return;
+      siteConfig.announcement.text = document.getElementById('announcementInput').value;
+      siteConfig.store.whatsapp_number = document.getElementById('storeWa').value;
+      siteConfig.store.phone = document.getElementById('storePhone').value;
+      siteConfig.store.timings = document.getElementById('storeTimings').value;
+
+      const jsonStr = JSON.stringify(siteConfig, null, 2);
+      navigator.clipboard.writeText(jsonStr).then(() => {
+        alert("✅ JSON कोड क्लिपबोर्डवर कॉपी झाला आहे!\nआता 'GitHub वर थेट सेव्ह करा' वर क्लिक करून तिथे पेस्ट करा व Commit changes दाबा.");
+      }).catch(err => {
+        alert("कृपया हा कोड कॉपी करा:\n" + jsonStr);
+      });
     }
   </script>
 </body>
