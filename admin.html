@@ -146,11 +146,34 @@
           <div>
             <div class="flex items-center gap-2 text-brandRed font-black text-base">
               <span>🥛</span>
-              <h2>CURRENT PROTEIN & SUPPLEMENT OFFER PRICES (सध्याचे सप्लीमेंट्सचे दर)</h2>
+              <h2>OFFICIAL BRANDS & SUPPLEMENT OFFER PRICES (सर्व ब्रँड्सचे ऑफर दर)</h2>
             </div>
-            <p class="text-xs text-zinc-400 mt-0.5 font-marathi">येथे तुम्ही व्हे प्रोटीन, क्रिएटिन, मास गेनर व कॉम्बो स्टॅकचे दर थेट बदलू शकता.</p>
+            <p class="text-xs text-zinc-400 mt-0.5 font-marathi">ON, MuscleTech, Cellucor C4, XTEND, GNC, Fuel One, Venky's सह सर्व ब्रँड्सच्या विक्री किंमती थेट अपडेट करा.</p>
           </div>
-          <span class="text-xs text-emerald-400 font-mono">Live Product Counter: 4 Items</span>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-emerald-400 font-mono" id="prodCounterBadge">Live Products: 12 Items</span>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between bg-zinc-900/80 p-3.5 rounded-2xl border border-zinc-800">
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 text-xs font-bold" id="adminBrandFilters">
+            <button onclick="filterAdminProducts('all', this)" class="admin-brand-btn active px-3 py-1.5 rounded-lg bg-brandRed text-white">All Brands</button>
+            <button onclick="filterAdminProducts('on', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">ON</button>
+            <button onclick="filterAdminProducts('muscletech', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">MuscleTech</button>
+            <button onclick="filterAdminProducts('cellucor', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">C4</button>
+            <button onclick="filterAdminProducts('scivation', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">XTEND</button>
+            <button onclick="filterAdminProducts('gnc', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">GNC</button>
+            <button onclick="filterAdminProducts('fuel-one', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">Fuel One</button>
+            <button onclick="filterAdminProducts('venkys', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">Venky's</button>
+            <button onclick="filterAdminProducts('pintola', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">Pintola</button>
+            <button onclick="filterAdminProducts('the-protein-co', this)" class="admin-brand-btn px-3 py-1.5 rounded-lg bg-surfaceElevated text-zinc-300 hover:text-white">Store Exclusives</button>
+          </div>
+
+          <div class="relative shrink-0">
+            <input type="text" id="adminSearchInput" oninput="searchAdminProducts(this.value)" placeholder="Search product or brand..." 
+                   class="input-admin px-3.5 py-1.5 rounded-xl text-xs w-full sm:w-56">
+          </div>
         </div>
 
         <div id="productsListContainer" class="space-y-4">
@@ -249,35 +272,77 @@
       renderProductsList();
     }
 
+    let currentAdminBrand = 'all';
+    let currentAdminSearch = '';
+
+    function filterAdminProducts(brandId, btn) {
+      currentAdminBrand = brandId;
+      document.querySelectorAll('.admin-brand-btn').forEach(b => {
+        b.classList.remove('bg-brandRed', 'text-white', 'active');
+        b.classList.add('bg-surfaceElevated', 'text-zinc-300');
+      });
+      if (btn) {
+        btn.classList.add('bg-brandRed', 'text-white', 'active');
+        btn.classList.remove('bg-surfaceElevated', 'text-zinc-300');
+      }
+      renderProductsList();
+    }
+
+    function searchAdminProducts(val) {
+      currentAdminSearch = val.toLowerCase().trim();
+      renderProductsList();
+    }
+
     function renderProductsList() {
       const container = document.getElementById('productsListContainer');
       container.innerHTML = "";
 
       if (!siteConfig.products) return;
 
+      let visibleCount = 0;
+
       siteConfig.products.forEach((prod, index) => {
+        // Filter by brand
+        if (currentAdminBrand !== 'all' && prod.brand_id !== currentAdminBrand) {
+          return;
+        }
+
+        // Filter by search
+        if (currentAdminSearch) {
+          const matchTitle = (prod.title || '').toLowerCase().includes(currentAdminSearch);
+          const matchBrand = (prod.brand_name || '').toLowerCase().includes(currentAdminSearch);
+          const matchDesc = (prod.marathi_desc || '').toLowerCase().includes(currentAdminSearch);
+          if (!matchTitle && !matchBrand && !matchDesc) return;
+        }
+
+        visibleCount++;
+
         const card = document.createElement('div');
         card.className = "p-5 rounded-2xl bg-surfaceElevated border border-softBorder space-y-4";
         card.innerHTML = `
           <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-zinc-700 gap-2">
             <div class="flex items-center gap-2">
               <span class="w-6 h-6 rounded-md bg-brandRed text-white text-[10px] font-black flex items-center justify-center font-mono">0${index + 1}</span>
+              <span class="text-xs font-black uppercase px-2 py-0.5 rounded bg-zinc-800 text-brandRed border border-zinc-700">${prod.brand_name || 'Brand'}</span>
               <span class="text-sm font-extrabold text-white">${prod.title}</span>
             </div>
-            <label class="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
-              <input type="checkbox" ${prod.in_stock ? 'checked' : ''} onchange="toggleStock(${index}, this.checked)" class="accent-rose-500 rounded w-4 h-4">
-              <span class="${prod.in_stock ? 'text-emerald-400 font-bold' : 'text-zinc-500'}">स्टॉकमध्ये उपलब्ध (In Stock)</span>
-            </label>
+            <div class="flex items-center gap-3">
+              <span class="text-[10px] text-zinc-400 font-mono">${prod.importer_auth || ''}</span>
+              <label class="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer">
+                <input type="checkbox" ${prod.in_stock ? 'checked' : ''} onchange="toggleStock(${index}, this.checked)" class="accent-rose-500 rounded w-4 h-4">
+                <span class="${prod.in_stock ? 'text-emerald-400 font-bold' : 'text-zinc-500'}">स्टॉकमध्ये उपलब्ध</span>
+              </label>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label class="block text-[11px] font-bold text-zinc-300 mb-1">ऑफर विक्री किंमत (Offer Price) <span class="text-brandRed">*</span></label>
-              <input type="text" value="${prod.price}" onchange="updateProductField(${index}, 'price', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm font-bold text-emerald-400">
+              <input type="text" value="${prod.price}" onchange="updateProductField(${index}, 'price', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm font-bold text-emerald-400 font-mono">
             </div>
             <div>
               <label class="block text-[11px] font-bold text-zinc-300 mb-1">छापील MRP किंमत</label>
-              <input type="text" value="${prod.mrp}" onchange="updateProductField(${index}, 'mrp', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm text-zinc-300">
+              <input type="text" value="${prod.mrp}" onchange="updateProductField(${index}, 'mrp', this.value)" class="input-admin w-full px-3 py-2.5 rounded-xl text-sm text-zinc-300 font-mono">
             </div>
             <div>
               <label class="block text-[11px] font-bold text-zinc-300 mb-1">बचत टॅग (Discount Tag)</label>
@@ -291,13 +356,18 @@
               <input type="text" value="${prod.title}" onchange="updateProductField(${index}, 'title', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs text-zinc-200">
             </div>
             <div>
-              <label class="block text-[11px] font-bold text-zinc-300 mb-1">वर्णन (Description / Specs)</label>
+              <label class="block text-[11px] font-bold text-zinc-300 mb-1">वर्णन व स्पेक्स (Description)</label>
               <input type="text" value="${prod.marathi_desc || ''}" onchange="updateProductField(${index}, 'marathi_desc', this.value)" class="input-admin w-full px-3 py-2 rounded-xl text-xs text-zinc-200 font-marathi">
             </div>
           </div>
         `;
         container.appendChild(card);
       });
+
+      const badge = document.getElementById('prodCounterBadge');
+      if (badge) {
+        badge.textContent = `Showing: ${visibleCount} of ${siteConfig.products.length} Products`;
+      }
     }
 
     function updateProductField(index, field, val) {

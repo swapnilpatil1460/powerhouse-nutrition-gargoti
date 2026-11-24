@@ -9,9 +9,119 @@
   },
   "announcement": {
     "enabled": true,
-    "text": "↓ PRICE DROP · UP TO 40% OFF STOREWIDE · BUY 2 OR MORE, GET EXTRA 10% OFF · ENDS TONIGHT!"
+    "text": "↓ PRICE DROP · UP TO 40% OFF STOREWIDE · ON, MUSCLETECH, C4, XTEND & GNC IN STOCK · ENDS TONIGHT!"
   },
-  "hero_offer_tag": "100% ORIGINAL IMPORTER CERTIFIED • CHEAPER & FASTER THAN ONLINE",
+  "hero_offer_tag": "100% AUTHENTIC GLOBAL & INDIAN BRANDS • OFFICIAL IMPORTERS CERTIFIED",
+  "brands": [
+    {
+      "id": "on",
+      "name": "Optimum Nutrition (ON)",
+      "badge": "World's #1 Whey",
+      "country": "USA",
+      "importer": "Glanbia Official Verified",
+      "featured_product": "Gold Standard 100% Whey",
+      "color": "from-red-600 to-rose-700"
+    },
+    {
+      "id": "muscletech",
+      "name": "MuscleTech",
+      "badge": "USA #1 Selling",
+      "country": "USA",
+      "importer": "MusclePro / Official Auth",
+      "featured_product": "Nitro-Tech Whey Gold",
+      "color": "from-zinc-900 to-neutral-800"
+    },
+    {
+      "id": "cellucor",
+      "name": "Cellucor (C4)",
+      "badge": "#1 Pre-Workout",
+      "country": "USA",
+      "importer": "Authorized Importer",
+      "featured_product": "C4 Original Pre-Workout",
+      "color": "from-amber-500 to-yellow-600"
+    },
+    {
+      "id": "scivation",
+      "name": "Scivation XTEND",
+      "badge": "#1 BCAA Global",
+      "country": "USA",
+      "importer": "Nutrabolt / Bright Auth",
+      "featured_product": "XTEND Original BCAA 7G",
+      "color": "from-blue-600 to-indigo-700"
+    },
+    {
+      "id": "gnc",
+      "name": "GNC Live Well",
+      "badge": "US Gold Standard",
+      "country": "USA",
+      "importer": "Guardian Healthcare Official",
+      "featured_product": "Pro Performance 100% Whey",
+      "color": "from-rose-600 to-red-700"
+    },
+    {
+      "id": "fuel-one",
+      "name": "Fuel One (MuscleBlaze)",
+      "badge": "High Protein Indian",
+      "country": "India",
+      "importer": "Direct Factory / Labdoor Tested",
+      "featured_product": "Alpha Max Whey",
+      "color": "from-orange-500 to-amber-600"
+    },
+    {
+      "id": "venkys",
+      "name": "Venky's Nutrition",
+      "badge": "Pure Egg Albumen",
+      "country": "India",
+      "importer": "Venky's India Official",
+      "featured_product": "Albumen Plus Egg Protein",
+      "color": "from-sky-600 to-blue-700"
+    },
+    {
+      "id": "ronnie-coleman",
+      "name": "Ronnie Coleman (RCSS)",
+      "badge": "8x Mr. Olympia",
+      "country": "USA",
+      "importer": "SSNC / Official Importer",
+      "featured_product": "Pro-Antium Multi-Blend",
+      "color": "from-red-700 to-rose-900"
+    },
+    {
+      "id": "bpi-sports",
+      "name": "BPI Sports",
+      "badge": "Ultra Pure ISO-HD",
+      "country": "USA",
+      "importer": "Bright Commodities Auth",
+      "featured_product": "1 WHEY & Best BCAA",
+      "color": "from-cyan-600 to-blue-800"
+    },
+    {
+      "id": "kevin-levrone",
+      "name": "Kevin Levrone",
+      "badge": "Signature Series",
+      "country": "EU",
+      "importer": "Authorized Indian Importer",
+      "featured_product": "DNA Anabolic Mass",
+      "color": "from-amber-600 to-orange-700"
+    },
+    {
+      "id": "pintola",
+      "name": "Pintola",
+      "badge": "#1 Peanut Butter",
+      "country": "India",
+      "importer": "Direct Manufacturer",
+      "featured_product": "High-Protein Peanut Butter",
+      "color": "from-amber-700 to-yellow-800"
+    },
+    {
+      "id": "asitis-atom",
+      "name": "Asitis / ATOM",
+      "badge": "Zero Fillers",
+      "country": "India",
+      "importer": "Clean Nutrition Direct",
+      "featured_product": "ATOM Whey Protein",
+      "color": "from-slate-700 to-zinc-900"
+    }
+  ],
   "athlete_stack": {
     "title": "The Protein Company Pro Strength Stack",
     "tagline": "अल्ट्रा-प्युअर व्हे, मायक्रोनाईज्ड क्रिएटिन आणि शेकर कॉम्बो!",
@@ -29,15 +139,207 @@
   },
   "products": [
     {
-      "id": "whey-isolate",
+      "id": "on-gold-standard",
+      "brand_id": "on",
+      "brand_name": "Optimum Nutrition",
       "category": "protein",
-      "title": "The Protein Company 100% Whey Isolate",
-      "marathi_desc": "२७g प्रोटीन • ५.५g BCAAs • ०% भेसळ • DigeZyme®",
+      "title": "Optimum Nutrition (ON) Gold Standard 100% Whey (5 lbs / 2.27 kg)",
+      "marathi_desc": "२४g व्हे आयसोलेट ब्लेंड • ५.५g BCAAs • ४g ग्लुटामिन • Glanbia अधिकृत",
+      "price": "₹६,४९९",
+      "mrp": "₹८,०९९",
+      "saving": "बचत ₹१,६००",
+      "tag": "WORLD'S #1 WHEY",
+      "tag_color": "rose",
+      "importer_auth": "Glanbia Authentic Scratch Code",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "जगातील सर्वात जास्त विकले जाणारे #1 व्हे प्रोटीन",
+        "Glanbia अधिकृत इम्पोर्टर स्क्रॅच कोड (१००% पडताळणी)",
+        "डबल रिच चॉकलेट, मोका कॅपुचिनो व व्हॅनिला आईस्क्रीम"
+      ]
+    },
+    {
+      "id": "muscletech-nitro-tech",
+      "brand_id": "muscletech",
+      "brand_name": "MuscleTech",
+      "category": "protein",
+      "title": "MuscleTech Nitro-Tech 100% Whey Gold (4 lbs / 1.8 kg)",
+      "marathi_desc": "२४g मायक्रोफिल्टर्ड व्हे पेप्टाइड्स • ५.५g BCAAs • झिरो शुगर • MusclePro Verified",
+      "price": "₹४,९९९",
+      "mrp": "₹६,४९९",
+      "saving": "बचत ₹१,५००",
+      "tag": "TOP SELLER USA",
+      "tag_color": "amber",
+      "importer_auth": "MusclePro Importer Verified",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "सुपीरियर व्हे पेप्टाइड्स आणि आयसोलेट फॉर्म्युला",
+        "अत्यंत जलद स्नायूंची रिकव्हरी आणि भरीव पंप",
+        "डबल रिच चॉकलेट व कुकीज अँड क्रीम"
+      ]
+    },
+    {
+      "id": "cellucor-c4",
+      "brand_id": "cellucor",
+      "brand_name": "Cellucor",
+      "category": "preworkout",
+      "title": "Cellucor C4 Original Pre-Workout (30 Servings)",
+      "marathi_desc": "१५०mg कॅफिन • CarnoSyn® बीटा-अलॅनिन • नायट्रिक ऑक्साईड पंप",
+      "price": "₹१,९९९",
+      "mrp": "₹२,७९९",
+      "saving": "बचत ₹८००",
+      "tag": "AMERICA'S #1 PRE-WORKOUT",
+      "tag_color": "yellow",
+      "importer_auth": "Official Importer Verified",
+      "in_stock": true,
+      "image": "./assets/creatine-jar.jpg",
+      "benefits": [
+        "वर्कआउटसाठी स्फोटक ऊर्जा, फोकस आणि तीव्र स्टॅमिना",
+        "CarnoSyn® बीटा-अलॅनिन (स्नायूंची थकवा रोखण्याची क्षमता)",
+        "आईस ब्लू राझ व फ्रूट पंच फ्लेवर"
+      ]
+    },
+    {
+      "id": "scivation-xtend",
+      "brand_id": "scivation",
+      "brand_name": "Scivation",
+      "category": "bcaa",
+      "title": "Scivation XTEND Original BCAA 7G (30 Servings)",
+      "marathi_desc": "७g BCAAs २:१:१ • हायड्रेशन इलेक्ट्रोलाइट्स • ०g कॅलरीज • ०g साखर",
+      "price": "₹१,७९९",
+      "mrp": "₹२,३९९",
+      "saving": "बचत ₹६००",
+      "tag": "GLOBAL #1 BCAA",
+      "tag_color": "blue",
+      "importer_auth": "Nutrabolt / Bright Auth",
+      "in_stock": true,
+      "image": "./assets/creatine-jar.jpg",
+      "benefits": [
+        "इंट्रा-वर्कआउट हायड्रेशन व त्वरित मसल प्रोटीन सिंथेसिस",
+        "कॅटाबॉलिझम रोखून वर्कआउट दरम्यान स्नायूंचे रक्षण",
+        "वॉटरमेलन व मॅंगो मॅडनेस फ्लेवर"
+      ]
+    },
+    {
+      "id": "fuel-one-alpha-max",
+      "brand_id": "fuel-one",
+      "brand_name": "Fuel One",
+      "category": "protein",
+      "title": "Fuel One (MuscleBlaze) Alpha Max Whey (1 kg / 2.2 lbs)",
+      "marathi_desc": "२६g प्रोटीन प्रति स्कूप • ५.७g BCAAs • लॅबडोअर युएसए टेस्टेड • झिरो स्पायकिंग",
+      "price": "₹१,५९९",
+      "mrp": "₹२,०९९",
+      "saving": "बचत ₹५००",
+      "tag": "BEST VALUE WHEY",
+      "tag_color": "emerald",
+      "importer_auth": "100% Labdoor USA Certified",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "बजेटमध्ये जास्तीत जास्त २६g प्रोटीन मिळवणारा सर्वोत्तम भारतीय ब्रँड",
+        "हजारो जिम ॲथलीट्सचा पसंतीचा पर्याय",
+        "मिल्क चॉकलेट व कॅफे मोका फ्लेवर"
+      ]
+    },
+    {
+      "id": "venkys-albumen-plus",
+      "brand_id": "venkys",
+      "brand_name": "Venky's",
+      "category": "protein",
+      "title": "Venky's Nutrition Albumen Plus Egg White Protein (1 kg)",
+      "marathi_desc": "१००% प्युअर एग्ग व्हाईट अल्ब्युमिन • लॅक्टोज-फ्री • २४.५g प्रोटीन • पचनास हलके",
+      "price": "₹१,४९९",
+      "mrp": "₹१,८९९",
+      "saving": "बचत ₹४००",
+      "tag": "PURE EGG PROTEIN",
+      "tag_color": "sky",
+      "importer_auth": "Venky's India Official",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "दुग्धजन्य पदार्थांची ॲलर्जी (Lactose Intolerance) असणाऱ्यांसाठी सर्वोत्तम",
+        "१००% बायोलॉजिकल व्हॅल्यू (BV 100) स्नायूंचा विकास",
+        "स्वादिष्ट चॉकलेट फ्लेवर"
+      ]
+    },
+    {
+      "id": "rcss-pro-antium",
+      "brand_id": "ronnie-coleman",
+      "brand_name": "Ronnie Coleman",
+      "category": "protein",
+      "title": "Ronnie Coleman Signature Series Pro-Antium (5.6 lbs / 2.5 kg)",
+      "marathi_desc": "३०g मल्टी-सोर्स प्रोटीन • रियल कुकी पीसेस • ५g क्रिएटिन • २.५g बीटाईन",
+      "price": "₹४,७९९",
+      "mrp": "₹६,२९९",
+      "saving": "बचत ₹१,५००",
+      "tag": "8X MR. OLYMPIA STACK",
+      "tag_color": "rose",
+      "importer_auth": "SSNC Certified Official Import",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "८ वेळा मिस्टर ऑलिम्पिया ठरलेल्या रॉनी कोलमनचा हेवी-ड्युटी फॉर्म्युला",
+        "३०g प्रोटीन सोबत ५g क्रिएटिन व खऱ्या ओरियो कुकीजचे तुकडे",
+        "डबल चॉकलेट कुकी क्रंच"
+      ]
+    },
+    {
+      "id": "gnc-pro-performance",
+      "brand_id": "gnc",
+      "brand_name": "GNC",
+      "category": "protein",
+      "title": "GNC Pro Performance 100% Whey (2 kg / 4.4 lbs)",
+      "marathi_desc": "२४g १००% व्हे • ५.५g BCAAs • DigeZyme® एन्झाईम्स • यूएसए फॉर्म्युला",
+      "price": "₹३,८९९",
+      "mrp": "₹४,९९९",
+      "saving": "बचत ₹१,१००",
+      "tag": "US HERITAGE",
+      "tag_color": "red",
+      "importer_auth": "Guardian Healthcare Official",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "१९३५ पासून जगातील सर्वात प्रतिष्ठित न्यूट्रिशन ब्रँड",
+        "पचनास अत्यंत सोपे आणि १००% ग्लूटन-फ्री",
+        "चॉकलेट फज व व्हॅनिला क्रिम"
+      ]
+    },
+    {
+      "id": "pintola-peanut-butter",
+      "brand_id": "pintola",
+      "brand_name": "Pintola",
+      "category": "snacks",
+      "title": "Pintola All Natural High-Protein Peanut Butter (1 kg)",
+      "marathi_desc": "३०g प्रोटीन • १००% रोस्टेड शेंगदाणे • ०g साखर • ०g हायड्रोजनेटेड ऑईल",
+      "price": "₹४४९",
+      "mrp": "₹५९९",
+      "saving": "बचत ₹१५०",
+      "tag": "#1 NATURAL PEANUT BUTTER",
+      "tag_color": "amber",
+      "importer_auth": "100% Authentic Pintola Direct",
+      "in_stock": true,
+      "image": "./assets/creatine-jar.jpg",
+      "benefits": [
+        "नैसर्गिक ऊर्जा, हेल्दी फॅट्स आणि डाएटरी फायबरचा खजिना",
+        "कोणतेही प्रिझर्व्हेटिव्ह किंवा पाम ऑईल नाही",
+        "क्रंची आणि क्रीमी व्हेरिएंट उपलब्ध"
+      ]
+    },
+    {
+      "id": "the-protein-co-isolate",
+      "brand_id": "the-protein-co",
+      "brand_name": "The Protein Company",
+      "category": "protein",
+      "title": "The Protein Company 100% Whey Isolate (2 kg)",
+      "marathi_desc": "२७g प्रोटीन • ५.५g BCAAs • ०% भेसळ • DigeZyme® एन्झाईम्स",
       "price": "₹२,४९९",
       "mrp": "₹३,२९९",
       "saving": "बचत ₹८००",
-      "tag": "#1 BESTSELLER",
+      "tag": "STORE EXCLUSIVE",
       "tag_color": "rose",
+      "importer_auth": "The Protein Company Authentic",
       "in_stock": true,
       "image": "./assets/whey-isolate-bottle.jpg",
       "benefits": [
@@ -47,33 +349,18 @@
       ]
     },
     {
-      "id": "athlete-stack",
-      "category": "stack",
-      "title": "The Protein Company Pro Athlete Strength Stack",
-      "marathi_desc": "व्हे प्रोटीन (2kg) + क्रिएटिन (250g) + फ्री शेकर",
-      "price": "₹३,४९९",
-      "mrp": "₹४,५९९",
-      "saving": "बचत ₹१,१००",
-      "tag": "MOST POPULAR BUNDLE",
-      "tag_color": "amber",
-      "in_stock": true,
-      "image": "./assets/protein-hero-lineup.jpg",
-      "benefits": [
-        "जिम आणि हेवी लिफ्टिंगसाठी सर्वांत लोकप्रिय ऑल-इन-वन स्टॅक",
-        "स्टॅमिना आणि लीन स्नायूंची वेगवान वाढ",
-        "सोबत १ प्रीमियम जिम शेकर कप मोफत!"
-      ]
-    },
-    {
-      "id": "pure-creatine",
+      "id": "the-protein-co-creatine",
+      "brand_id": "the-protein-co",
+      "brand_name": "The Protein Company",
       "category": "strength",
-      "title": "The Protein Company Micronized Creapure Creatine",
+      "title": "The Protein Company Micronized Creapure Creatine (250g)",
       "marathi_desc": "१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g / ८३ सर्व्हिंग्स)",
       "price": "₹७९९",
       "mrp": "₹१,१९९",
       "saving": "बचत ₹४००",
       "tag": "POWER BOOSTER",
       "tag_color": "slate",
+      "importer_auth": "Creapure® Certified Purity",
       "in_stock": true,
       "image": "./assets/creatine-jar.jpg",
       "benefits": [
@@ -83,21 +370,24 @@
       ]
     },
     {
-      "id": "mass-gainer",
-      "category": "gainer",
-      "title": "The Protein Company High-Calorie Mass Gainer",
-      "marathi_desc": "१२०० कॅलरीज • ५०g प्रोटीन • कॉम्प्लेक्स कार्ब्स (३kg)",
-      "price": "₹१,८९९",
-      "mrp": "₹२,४९९",
-      "saving": "बचत ₹६००",
-      "tag": "RAPID MASS",
-      "tag_color": "emerald",
+      "id": "athlete-stack",
+      "brand_id": "the-protein-co",
+      "brand_name": "The Protein Company",
+      "category": "stack",
+      "title": "The Protein Company Pro Athlete Strength Stack",
+      "marathi_desc": "व्हे प्रोटीन (2kg) + क्रिएटिन (250g) + फ्री शेकर",
+      "price": "₹३,४९९",
+      "mrp": "₹४,५९९",
+      "saving": "बचत ₹१,१००",
+      "tag": "MOST POPULAR BUNDLE",
+      "tag_color": "amber",
+      "importer_auth": "Complete Athlete Stack",
       "in_stock": true,
-      "image": "./assets/whey-isolate-bottle.jpg",
+      "image": "./assets/protein-hero-lineup.jpg",
       "benefits": [
-        "वजन आणि भरीव स्नायू वाढवण्यासाठी परिपूर्ण",
-        "MCT ऑईल्स आणि व्हिटॅमिन कॉम्प्लेक्सने समृद्ध",
-        "डच चॉकलेट फ्लेवर"
+        "जिम आणि हेवी लिफ्टिंगसाठी सर्वांत लोकप्रिय ऑल-इन-वन स्टॅक",
+        "स्टॅमिना आणि लीन स्नायूंची वेगवान वाढ",
+        "सोबत १ प्रीमियम जिम शेकर कप मोफत!"
       ]
     }
   ]
