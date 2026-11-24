@@ -9,74 +9,95 @@
   },
   "announcement": {
     "enabled": true,
-    "text": "🚩 कोल्हापूर व गारगोटी परिसरातील पैलवान आणि खेळाडूंसाठी खास सवलत! ऑनलाईनपेक्षा स्वस्त आणि १००% अस्सल माल!"
+    "text": "↓ PRICE DROP · UP TO 40% OFF STOREWIDE · BUY 2 OR MORE, GET EXTRA 10% OFF · ENDS TONIGHT!"
   },
-  "hero_offer_tag": "BETTER THAN ONLINE & CHEAPER! • ऑनलाईनपेक्षा स्वस्त आणि भारी!",
-  "pailwan_stack": {
-    "title": "Pailwan Strength Stack",
-    "tagline": "लाल मातीतून तयार झालेली मर्दानी ताकद!",
-    "english_sub": "(Mardaani strength born of the red soil!)",
+  "hero_offer_tag": "100% ORIGINAL IMPORTER CERTIFIED • CHEAPER & FASTER THAN ONLINE",
+  "athlete_stack": {
+    "title": "PowerHouse Pro Strength Stack",
+    "tagline": "अल्ट्रा-प्युअर व्हे, मायक्रोनाईज्ड क्रिएटिन आणि शेकर कॉम्बो!",
+    "english_sub": "(Engineered for Maximum Lean Muscle & Recovery)",
     "price": "₹३,४९९",
     "mrp": "₹४,५९९",
     "saving": "बचत ₹१,१००",
-    "image": "./assets/product-stack.jpg",
+    "image": "./assets/powerhouse-hero-lineup.jpg",
     "in_stock": true,
     "benefits": [
-      "व्हे प्रोटीन + मायक्रोनाईज्ड क्रिएटिन + अश्वगंधा बूस्टर",
-      "लाल मातीतील कुस्तीसाठी स्फोटक ताकद आणि सहनशक्ती",
-      "कॉम्बोवर मिळवा थेट ₹१,१०० रुपयांची थेट सूट!"
+      "100% कोल्ड-मायक्रोफिल्टर्ड व्हे (27g Protein per scoop)",
+      "Creapure® मायक्रोनाईज्ड क्रिएटिन (जलद मसल व्हॉल्यूम व ताकद)",
+      "फ्री प्रीमियम जिम शेकर कप कॉम्बो सोबत मोफत!"
     ]
   },
   "products": [
     {
       "id": "whey-isolate",
+      "category": "protein",
       "title": "PowerHouse 100% Whey Isolate",
-      "marathi_desc": "२५g प्रोटीन • ५.५g BCAAs • झिरो शुगर",
+      "marathi_desc": "२७g प्रोटीन • ५.५g BCAAs • ०% भेसळ • DigeZyme®",
       "price": "₹२,४९९",
       "mrp": "₹३,२९९",
       "saving": "बचत ₹८००",
-      "tag": "#1 Bestseller",
-      "tag_color": "amberGold",
+      "tag": "#1 BESTSELLER",
+      "tag_color": "rose",
       "in_stock": true,
-      "image": "./assets/wrestler-tub.jpg",
+      "image": "./assets/whey-isolate-bottle.jpg",
       "benefits": [
         "जलद मसल रिकव्हरी व स्नायूंची ताकद",
-        "DigeZyme® एन्झाईम्स (पचनास अत्यंत हलके)",
-        "स्वादिष्ट रिच चॉकलेट व व्हॅनिला फ्लेवर"
+        "DigeZyme® एन्झाईम्स (पचनास अत्यंत हलके, झिरो ब्लोटिंग)",
+        "स्वादिष्ट रिच चॉकलेट, व्हॅनिला व मलाई कुल्फी फ्लेवर"
       ]
     },
     {
-      "id": "pailwan-stack",
-      "title": "Pailwan Akhada Strength Stack",
-      "marathi_desc": "व्हे प्रोटीन + क्रिएटिन + अश्वगंधा बूस्टर",
+      "id": "athlete-stack",
+      "category": "stack",
+      "title": "PowerHouse Pro Athlete Strength Stack",
+      "marathi_desc": "व्हे प्रोटीन (2kg) + क्रिएटिन (250g) + फ्री शेकर",
       "price": "₹३,४९९",
       "mrp": "₹४,५९९",
       "saving": "बचत ₹१,१००",
-      "tag": "Most Recommended",
-      "tag_color": "saffron",
+      "tag": "MOST POPULAR BUNDLE",
+      "tag_color": "amber",
       "in_stock": true,
-      "image": "./assets/product-stack.jpg",
+      "image": "./assets/powerhouse-hero-lineup.jpg",
       "benefits": [
-        "लाल मातीतील तालमीसाठी स्फोटक ताकद",
-        "स्टॅमिना आणि स्नायूंची झटपट वाढ",
-        "सोबत १ फ्री शेकर कप मोफत!"
+        "जिम आणि हेवी लिफ्टिंगसाठी सर्वांत लोकप्रिय ऑल-इन-वन स्टॅक",
+        "स्टॅमिना आणि लीन स्नायूंची वेगवान वाढ",
+        "सोबत १ प्रीमियम जिम शेकर कप मोफत!"
       ]
     },
     {
       "id": "pure-creatine",
-      "title": "Micronized Pure Creatine",
-      "marathi_desc": "१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g)",
+      "category": "strength",
+      "title": "PowerHouse Micronized Creapure Creatine",
+      "marathi_desc": "१००% अल्ट्रा-प्युअर मोनोहायड्रेट (२५०g / ८३ सर्व्हिंग्स)",
       "price": "₹७९९",
       "mrp": "₹१,१९९",
       "saving": "बचत ₹४००",
-      "tag": "Power Booster",
-      "tag_color": "amberGold",
+      "tag": "POWER BOOSTER",
+      "tag_color": "slate",
       "in_stock": true,
-      "image": "./assets/wrestler-tub.jpg",
+      "image": "./assets/creatine-jar.jpg",
       "benefits": [
-        "हेवी लिफ्टिंग व कुस्तीसाठी प्रचंड ऊर्जा",
-        "मसल व्हॉल्यूम व ताकद वाढवते",
-        "पाण्यात पूर्णपणे विरघळते (No Grit)"
+        "हेवी लिफ्टिंग व वर्कआउटसाठी स्फोटक ऊर्जा आणि एटीपी",
+        "मसल व्हॉल्यूम आणि सहनशक्ती वाढवते",
+        "पाण्यात १००% विरघळते (No Chalky Grit)"
+      ]
+    },
+    {
+      "id": "mass-gainer",
+      "category": "gainer",
+      "title": "PowerHouse High-Calorie Mass Gainer",
+      "marathi_desc": "१२०० कॅलरीज • ५०g प्रोटीन • कॉम्प्लेक्स कार्ब्स (३kg)",
+      "price": "₹१,८९९",
+      "mrp": "₹२,४९९",
+      "saving": "बचत ₹६००",
+      "tag": "RAPID MASS",
+      "tag_color": "emerald",
+      "in_stock": true,
+      "image": "./assets/whey-isolate-bottle.jpg",
+      "benefits": [
+        "वजन आणि भरीव स्नायू वाढवण्यासाठी परिपूर्ण",
+        "MCT ऑईल्स आणि व्हिटॅमिन कॉम्प्लेक्सने समृद्ध",
+        "डच चॉकलेट फ्लेवर"
       ]
     }
   ]

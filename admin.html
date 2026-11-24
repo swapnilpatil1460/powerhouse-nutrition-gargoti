@@ -137,12 +137,12 @@
         </div>
       </section>
 
-      <!-- Pailwan Strength Stack Offer Card Editor -->
-      <section class="rounded-3xl p-6 bg-surfaceCard border border-saffron/40 shadow-xl space-y-4">
+      <!-- Pro Strength Stack Offer Card Editor -->
+      <section class="rounded-3xl p-6 bg-surfaceCard border border-brandRed/40 shadow-xl space-y-4">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2 text-saffron font-bold text-sm">
+          <div class="flex items-center gap-2 text-rose-500 font-bold text-sm">
             <span>🔥</span>
-            <h2>Pailwan Strength Stack Offer (पैलवान कॉम्बो स्टॅक दर)</h2>
+            <h2>Pro Athlete Strength Stack Offer (कॉम्बो स्टॅक दर)</h2>
           </div>
           <span class="text-xs text-waGreen font-semibold">Home Screen Highlight</span>
         </div>
@@ -227,9 +227,12 @@
       document.getElementById('storePhone').value = siteConfig.store.phone;
       document.getElementById('storeTimings').value = siteConfig.store.timings;
 
-      document.getElementById('stackPrice').value = siteConfig.pailwan_stack.price;
-      document.getElementById('stackMrp').value = siteConfig.pailwan_stack.mrp;
-      document.getElementById('stackSaving').value = siteConfig.pailwan_stack.saving;
+      const stack = siteConfig.athlete_stack || siteConfig.pailwan_stack;
+      if (stack) {
+        document.getElementById('stackPrice').value = stack.price || '';
+        document.getElementById('stackMrp').value = stack.mrp || '';
+        document.getElementById('stackSaving').value = stack.saving || '';
+      }
 
       renderProductsList();
     }
@@ -284,9 +287,15 @@
       siteConfig.store.phone = document.getElementById('storePhone').value;
       siteConfig.store.timings = document.getElementById('storeTimings').value;
 
-      siteConfig.pailwan_stack.price = document.getElementById('stackPrice').value;
-      siteConfig.pailwan_stack.mrp = document.getElementById('stackMrp').value;
-      siteConfig.pailwan_stack.saving = document.getElementById('stackSaving').value;
+      if (!siteConfig.athlete_stack) siteConfig.athlete_stack = {};
+      siteConfig.athlete_stack.price = document.getElementById('stackPrice').value;
+      siteConfig.athlete_stack.mrp = document.getElementById('stackMrp').value;
+      siteConfig.athlete_stack.saving = document.getElementById('stackSaving').value;
+      if (siteConfig.pailwan_stack) {
+        siteConfig.pailwan_stack.price = siteConfig.athlete_stack.price;
+        siteConfig.pailwan_stack.mrp = siteConfig.athlete_stack.mrp;
+        siteConfig.pailwan_stack.saving = siteConfig.athlete_stack.saving;
+      }
 
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(siteConfig, null, 2));
       const dlAnchor = document.createElement('a');
